@@ -1,0 +1,16 @@
+# set terminal pngcairo  transparent enhanced font "arial,10" fontscale 1.0 size 500, 350 
+# set output 'contours.png'
+set view 60, 30, 0.85, 1.1
+set samples 20, 20
+set isosamples 21, 21
+set contour base
+set cntrparam levels 30
+set title "3D gnuplot" 
+set xlabel "x" 
+set ylabel "y" 
+set zlabel "V(x,y)" 
+set zlabel  offset character 1, 0, 0 font "" textcolor lt -1 norotate
+# set zrange [ -1 : 20] noreverse nowriteback
+# splot [x=-2:2] [y=-2:2] (x - (0.23/1+0.23))**2. + y**2. + (2*0.23)/((1+0.23)*sqrt((-1+x)**2.+y**2.)) + 2./((1+0.23)*sqrt(x**2.+y**2.))
+# splot sin(x)+sin(y)
+splot 0.5*sin(x*y) -0.25*y/3.14159 -0.5*x, 0

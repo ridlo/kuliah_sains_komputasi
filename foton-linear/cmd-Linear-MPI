@@ -1,0 +1,2 @@
+mpic++ photonLinear-MPI.cpp -o photonLinear-MPI
+mpiexec -n 8 photonLinear-MPI > time_8_proc_lin

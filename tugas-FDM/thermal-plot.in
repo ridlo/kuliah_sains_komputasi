@@ -1,0 +1,5 @@
+set xlabel "x"
+set ylabel "u(x,t)"
+set xrange [0.:pi]
+set yrange [0.:1.]
+plot "eksak-out.txt" using 1:2 index 10 smooth csplines title "t = 0.5", "eksak-out.txt" using 1:2 index 10 lw 3 title "exact", "CN-out.txt" using 1:2 index 10 lw 3  title "CN", "btcs-out.txt" using 1:2 index 10 lw 3 title "BTCS", "ftcs-out.txt" using 1:2 index 10 lw 3 title "FTCS"

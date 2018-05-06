@@ -1,0 +1,10 @@
+reset
+set term gif animate size 800,600
+set output "animate_ga.gif"
+i=0
+n=1001
+set xlabel "x"
+set ylabel "f(x)"
+set xrange [0.0:0.3]
+set yrange [-160000:20000]
+load "animate-i.in"

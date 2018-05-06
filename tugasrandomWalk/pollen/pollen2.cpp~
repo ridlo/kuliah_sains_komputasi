@@ -1,0 +1,52 @@
+#include<iostream>
+#include<stdlib.h>
+#include<stdio.h>
+#include<math.h>
+#include<time.h>
+#include<fstream>
+#define _USE_MATH_DEFINES
+using namespace std;
+
+double phi, theta, l;
+double unirand(){ return (double)rand()/(double)RAND_MAX;}
+
+int main(){
+    int n=100;
+    double x[100], y[100], z[100];
+    double dx, dy, dz;
+    double xm=100., ym=100., zm=100.;
+    int t = 0, tf=1000;
+
+    srand(time(NULL));
+    // inisiasi
+    ofstream out("pollen-out.txt");
+    for (int i=0;i<n;i++){
+        x[i] = xm*unirand();
+        y[i] = ym*unirand();
+        z[i] = zm*unirand();
+        out << x[i] << " " << y[i] << " " << z[i] << endl;
+    }
+
+    do{
+	out << "\n\n";
+        for (int i=0;i<n;i++){
+            phi = 2.*M_PI*unirand();
+            theta = acos(1. - 2.*unirand());
+            l = unirand();
+            dx = l*sin(theta)*cos(phi);
+            dy = l*sin(theta)*sin(phi);
+            dz = l*cos(theta);
+            
+            x[i] = fmod((x[i] + dx + xm),xm);
+            y[i] = fmod((y[i] + dy + xm),ym);
+            z[i] = fmod((z[i] + dz + xm),zm);
+            
+            out << x[i] << " " << y[i] << " " << z[i] << endl;
+            }
+         
+         t = t+1;
+    } while(t < tf);
+    out.close();
+
+    return 0;
+}

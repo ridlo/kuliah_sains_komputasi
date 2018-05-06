@@ -1,0 +1,10 @@
+A hiker without a compass trying to find the way in the dark 
+can step in any of eight directions (N, NE, E, SE, E, SW, W, NW)
+eith each step. Studies show that people tend to veer to the right 
+under such circumstances. Initially, the hiker is facing north.
+Suppose at each step probabilities of going in the indicated directions
+are as follows: N-19%, NE-24%, E-17%, SE-10%, S-2%, SW-3%, W-10%, NW-15%. 
+Develop a simulation to trace a path of hiker, and run the simulation a number
+of times. Describe the results. (Note that other than at the initial step, 
+this simulation simplifies the problem by ignoring the direction in which
+the hiker faces.)

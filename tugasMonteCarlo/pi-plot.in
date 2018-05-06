@@ -1,0 +1,6 @@
+# gnuplot command for plotting
+set terminal wxt size 600, 500
+set xrange [0:1]
+set xlabel "x"
+set ylabel "y"
+plot "rnd-pi.txt" with dots, sqrt(1.-x*x)

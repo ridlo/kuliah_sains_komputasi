@@ -1,0 +1,5 @@
+# gnuplot input file
+set xrange [0:157.08]
+set xlabel "t"
+set ylabel "y(t) = sin(t)"
+plot "Ver-out.txt" u 1:3 w d lc 3, sin(x) w l

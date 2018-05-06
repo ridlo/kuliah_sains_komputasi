@@ -1,0 +1,7 @@
+set term png
+set output "norris.png"
+set xlabel "x"
+set ylabel "y = f(x)"
+f(x) = a + b*x
+fit f(x) "Norris.txt" using 1:2 via a,b
+plot "Norris.txt" u 1:2 title "data", f(x) title "fitting function"

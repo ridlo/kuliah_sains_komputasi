@@ -1,0 +1,80 @@
+/****************************************************/
+/* Gauss-Seidel + Successive Over-Relaxation (SOR)  */
+/* Copyleft (c) 2012. Ridlo W. Wibowo               */
+/****************************************************/
+#include <iostream>
+#include <stdio.h>
+#include <math.h>
+using namespace std;
+
+int main()
+{    
+    int i, j, k=0;
+    int n=6;
+    double A['n']['n']={{4., -1., 0., -1., 0., 0.},
+                        {-1., 4., -1., 0., -1., 0.},
+                        {0., -1., 4., 0., 0., -1.},
+                        {-1., 0., 0., 4., -1., 0.},
+                        {0., -1., 0., -1., 4., -1.},
+                        {0., 0., -1., 0., -1., 4.}};
+    double b['n']={0., 5., 0., 6., -2., 6.};
+    double xi['n']={0., 0., 0., 0., 0., 0.};
+    double ep=0.00001;
+    double omega=1.1; // omega untuk SOR
+    double xf['n'], eps, sum_a, sum_b, vnorm_f['n'], norm_i, norm_f;
+
+    cout << "### Program Gauss-Seidel + Successive Over-Relaxation untuk menyelesaikan SPL Ax=b ###\n";
+    
+    cout << "Matriks A : \n";
+    for (i=0; i<n; i++){
+        for (j=0; j<n; j++){ 
+           cout << A[i][j] << "\t";}
+        cout << "\n";}
+    cout << "Vektor b : \n";
+    for (i=0;i<n;i++){
+        cout << b[i] << "\t";}
+    cout << endl;
+    cout << "Tebakan awal x(k=0): \n";
+    for (i=0;i<n;i++){
+        cout << xi[i] << " ";}
+    cout << endl; 
+    cout << "epsilon   : " << ep << endl;
+    cout << "omega SOR : " << omega << endl;
+    // Gauss-Seidel method 
+    cout << "Nilai barisan solusi x(k) dan epsilon : \n";
+    do {
+        for (i=0;i<n;i++){
+            sum_a = 0.;
+            sum_b = 0.;
+                for (j=0;j<=i-1;j++){
+                    if (j != i){
+                    sum_a = sum_a - A[i][j]*xf[j];}}
+                for (j=i+1;j<=n;j++){
+                    if (j != i){
+                    sum_b = sum_b - A[i][j]*xi[j];}}
+            xf[i] = (1.-omega)*xi[i] + omega*(b[i] + sum_a + sum_b)/A[i][i];}
+        
+        // menghitung epsilon dari Infinity Norm
+        for (i=0;i<n;i++){
+            vnorm_f[i] = xf[i] - xi[i];}
+        norm_f = fabs(vnorm_f[0]);
+        norm_i = fabs(xf[0]);
+        for (i=1;i<n;i++)
+        {
+            if (fabs(vnorm_f[i]) > norm_f){norm_f = fabs(vnorm_f[i]);}
+            if (fabs(xf[i]) > norm_i){norm_i = fabs(xf[i]);}
+        }
+        eps = norm_f/norm_i;
+        k ++;
+        
+        // cout << k << "\t";
+        for (i=0;i<n;i++){
+            xi[i] = xf[i]; // tukar x(k) dengan x(k+1)
+            printf("%7.4f ", xf[i]);}
+        cout << "\t" << eps;
+        cout << endl;
+
+    } while (eps > ep);
+    cout << "Jumlah iterasi : " << k << endl;
+    return 0;
+}

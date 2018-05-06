@@ -1,0 +1,300 @@
+h1{
+	font:14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	vertical-align: baseline;
+	clip: rect(auto auto auto auto);
+	color: #000000;
+	position: static;
+}
+h2{
+	font:14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	vertical-align: baseline;
+	clip: rect(auto auto auto auto);
+	color: #212854;
+	position: static;
+}
+h3{
+	font:12px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	vertical-align: baseline;
+	clip: rect(auto auto auto auto);
+	color: #000000;
+	position: static;
+}
+
+body {
+	margin-left: 10px;
+	margin-top: 0px;
+}
+.bodyText{
+	font:11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-weight:normal;	
+}
+.bodyTextBlack{
+	font:11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-weight:normal;	
+}
+.bodyTextBlackMed{
+	font:12px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-weight:normal;	
+}
+.bodyTextBlackBold{
+	font:11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-weight:bold;	
+}
+.bodyTextBlackBoldMed{
+	font:12px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-weight:bold;	
+}
+.bodyTextBlackBoldLg{
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;	
+	color: #000000;
+	font-weight:bold;	
+}
+.bodyTextBlackSm{
+	font:9px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-weight:normal;	
+}
+.bodyTextWhite{
+	font:11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-weight:normal;	
+}
+.bodyTextWhiteBold{
+	font:11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-weight:bold;	
+}
+.bodyTextWhiteBoldLg{
+	font:14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-weight:bold;	
+}
+ /* ---- BREADCRUMB:CSS for EDU ---- */
+ .breadcrumb {
+	margin:0px;
+	font:11px "Myriad Pro", Arial, Helvetica, sans-serif;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+}
+.breadcrumbBig {
+	margin:0px 0px 0px 5px;
+	font:11px "Myriad Pro", Arial, Helvetica, sans-serif;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+}
+a.breadcrumb {
+	font:11px "Myriad Pro", Arial, Helvetica, sans-serif;
+	line-height: normal;
+	color: #000000;
+	text-decoration:underline;
+	font-weight: bold;
+}
+a.breadcrumb:visited {
+	font:11px "Myriad Pro", Arial, Helvetica, sans-serif;
+	line-height: normal;
+	color: #000033;
+	text-decoration:underline;
+	font-weight: bold;
+}
+a.breadcrumb:hover {
+	font:11px "Myriad Pro", Arial, Helvetica, sans-serif;
+	line-height: normal;
+	color: #333366;
+	text-decoration:none;
+	font-weight: bold;
+}
+/* ---- BEGIN:CSS for EDU Top Navigation ---- */
+#eduHeader{
+	margin:0px;
+	padding:0px;
+	width:800px;
+	height:150px;
+	text-align:center;
+	background-image:url(/images/edu/header.jpg);
+	background-color:#999999;
+	}
+	#logolink
+	{
+		margin:10px;
+		padding:0px;
+		width:150px;
+		height:100px;
+		display:block;
+		float:left;
+	}
+.eduTopNav{
+	margin:0px 25px 0px 0px;
+	padding:0px;
+	font:16px "Myriad Pro", Arial, Helvetica, sans-serif;
+	font-weight:300;
+	letter-spacing:-1px;
+	color:#FFFFFF;
+	text-decoration:none;
+	}
+	.eduTopNav:hover{
+		text-decoration:underline;
+		}
+	.remvLtrSpc{
+		letter-spacing:-0.3px;
+		}
+	.lastLink{
+		margin:0px 10px 0px 0px;
+		padding:0px;
+		}
+	/* compensation for IE's Box Model */
+	*html .eduTopNav{		
+		margin:0px 22px 0px 0px;
+	}
+	*html .lastLink{
+		margin:0px 10px 0px 0px;
+		padding:0px;
+		}
+	/*Safari Hack Test*/
+	@media screen and (-webkit-min-device-pixel-ratio:0){
+               .eduTopNav{
+					margin:0px 18px 0px 0px;
+					}
+	}
+/* ---- END:CSS fot EDU Top Navigation ---- */
+
+.footerBtns{
+	margin:0px;
+	padding:8px 0px 0px 0px;
+	width:376px;
+	height:112px;
+	display:block;
+	font:24px "Myriad Pro", Arial, Helvetica, sans-serif;
+	font-weight:300;
+	letter-spacing:-1px;
+	color:#FFFFFF;
+	text-align:center;
+	text-decoration:none;
+	}
+	/* stop IE from cutting off the bottom of the background image */
+	*html .footerBtns{ height:120px; }
+	.footerBtns:hover{
+		font:24px "Myriad Pro", Arial, Helvetica, sans-serif;
+		font-weight:300;
+		letter-spacing:-1px;
+		color:#FFFFFF;
+		text-align:center;
+		text-decoration:underline;
+		}
+		
+.home-footerBtns{
+	margin:0px;
+	padding:10px 0px 0px 0px;
+	width:760px;
+	height:112px;
+	display:block;
+	font:24px "Myriad Pro", Arial, Helvetica, sans-serif;
+	font-weight:300;
+	letter-spacing:-1px;
+	color:#FFFFFF;
+	text-align:center;
+	text-decoration:none;
+	}
+	/* stop IE from cutting off the bottom of the background image */
+	*html .home-footerBtns{ height:120px; }
+	.home-footerBtns:hover{
+		font:24px "Myriad Pro", Arial, Helvetica, sans-serif;
+		font-weight:300;
+		letter-spacing:-1px;
+		color:#FFFFFF;
+		text-align:center;
+		text-decoration:underline;
+		}
+.homepageBtns{
+	margin:0px;
+	padding:202px 0px 0px 0px;
+	width:360px;
+	height:38px;
+	display:block;
+	font:24px "Myriad Pro", Arial, Helvetica, sans-serif;
+	font-weight:300;
+	letter-spacing:-1px;
+	color:#FFFFFF;
+	text-align:center;
+	text-decoration:none;
+	}
+	/* stop IE from cutting off the bottom of the background image */
+	*html .homepageBtns{height:240px;}
+	.homepageBtns:hover{
+		font:24px "Myriad Pro", Arial, Helvetica, sans-serif;
+		font-weight:300;
+		letter-spacing:-1px;
+		color:#FFFFFF;
+		text-align:center;
+		text-decoration:underline;
+		}
+.eduFootNav{
+	margin:0px 2px 5px 0px;
+	font:10px "Myriad Pro", Arial, Helvetica, sans-serif;
+	color:#666666;
+	text-align:center;
+	}
+.footerCopy{
+	margin-top:5px;
+	font:10px "Myriad Pro", Arial, Helvetica, sans-serif;
+	color:#333333;
+	text-align:center;
+	}
+/* BEGIN CSS for testimoninal display */
+.testi-text{
+	font:13px "Myriad Pro", Arial, Helvetica, sans-serif;
+	font-style:oblique;
+	}
+.testi-author{
+	font:11px "Myriad Pro", Arial, Helvetica, sans-serif;
+	}
+	/* remove comments to activate view all link 
+		.testi-viewAllbtn{
+		margin:0px 0px 0px 10px;
+		padding:0px;
+		font:11px "Myriad Pro", Arial, Helvetica, sans-serif;
+		font-weight:bold;
+		text-decoration:none;
+		color:#000000;
+		}
+		.testi-viewAllbtn:hover{
+			font:11px "Myriad Pro", Arial, Helvetica, sans-serif;
+			font-weight:bold;
+			text-decoration:underline;
+			color:#000000;
+			}
+	*/
+/* END CSS for testimoninal display */
+
+.categorylinkA{
+		font:12px "Myriad Pro", Arial, Helvetica, sans-serif;
+		color:#000000;
+		text-decoration:underline;
+		font-weight:bold;
+}
+.categorylinkA:visited {
+	font:12px "Myriad Pro", Arial, Helvetica, sans-serif;
+	line-height: normal;
+	color: #000033;
+	text-decoration:underline;
+	font-weight: bold;
+}
+.categorylinkA:hover {
+	font:12px "Myriad Pro", Arial, Helvetica, sans-serif;
+	line-height: normal;
+	color: #333366;
+	text-decoration:none;
+	font-weight: bold;
+}

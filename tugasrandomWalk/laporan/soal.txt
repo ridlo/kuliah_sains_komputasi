@@ -1,0 +1,25 @@
+A hiker without a compass trying to find the way in the dark 
+can step in any of eight directions (N, NE, E, SE, E, SW, W, NW)
+each step. Studies show that people tend to veer to the right 
+under such circumstances. Initially, the hiker is facing north.
+Suppose at each step probabilities of going in the indicated directions
+are as follows: N-19%, NE-24%, E-17%, SE-10%, S-2%, SW-3%, W-10%, NW-15%. 
+Develop a simulation to trace a path of hiker, and run the simulation a number
+of times. Describe the results. (Note that other than at the initial step, 
+this simulation simplifies the problem by ignoring the direction in which
+the hiker faces.)
+
+Perform a simulation of Brownian Motion of a pollen grain suspended in a liquid
+by generating a three-dimensional random walk. Using documentation for your 
+computational tool, investigate how to plot three-dimensional graphics and lines,
+and create a 3D graphic of the walk. 
+
+In 1827 the biologist Robert Brown noticed that if you looked at pollen grains in water through a microscope, the pollen jiggles about. He called this jiggling 'Brownian motion', but Brown couldn't work out what was causing it. The first of the three papers that Einstein published in 1905 finally came up with an explanation.
+
+Everything around us is made up of atoms and molecules: the chair you're sitting on, the food you eat, the air you're breathing. The idea of atoms has been around since the time of the ancient Greeks, and a century before Einstein, the great chemist John Dalton had suggested that all chemicals were made of tiny invisible molecules, which in turn were made of even tinier atoms. The problem was that there was no proof of their existence, until Einstein looked into the problem of Brownian motion.
+
+Einstein realised that the jiggling of the pollen grains seen in Brownian motion was due to molecules of water hitting the tiny pollen grains, like players kicking the ball in a game of football. The pollen grains were visible but the water molecules weren't, so it looked like the grains were bouncing around on their own.
+
+Einstein also showed that it was possible to work out how many molecules were hitting a single pollen grain and how fast the water molecules were moving - all by looking at the pollen grains.
+
+Importantly, Einstein's paper also made predictions about the properties of atoms that could be tested. The French physicist Jean Perrin used Einstein's predictions to work out the size of atoms and remove any remaining doubts about the existence of atoms.

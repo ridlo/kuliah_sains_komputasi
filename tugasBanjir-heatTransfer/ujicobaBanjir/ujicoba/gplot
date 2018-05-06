@@ -1,0 +1,5 @@
+set title "Simple Model"
+set xlabel "time"
+set ylabel "y(t)"
+plot "modelBanjir" with lines
+

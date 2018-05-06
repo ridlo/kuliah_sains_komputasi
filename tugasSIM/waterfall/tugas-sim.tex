@@ -1,0 +1,189 @@
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} 
+
+\usepackage[T1]{fontenc} 
+\usepackage[english]{babel}
+\usepackage{amsmath,amsfonts,amsthm}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{float}
+  \floatplacement{figure}{H}
+  \floatplacement{table}{H}
+\usepackage{sectsty} 
+\allsectionsfont{\centering \normalfont\scshape} 
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs 
+
+% -------- tambahan -------------
+% -------------------------------
+\usepackage[labelformat=empty]{caption} % remove caption number in figure
+\usepackage{color}
+\usepackage{listings}
+\lstset{ %
+language=bash,                % choose the language of the code
+basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+numbers=left,                   % where to put the line-numbers
+numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
+stepnumber=1,                   % the step between two line-numbers. If it is 1 each line will be numbered
+numbersep=5pt,                  % how far the line-numbers are from the code
+backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+showspaces=false,               % show spaces adding particular underscores
+showstringspaces=false,         % underline spaces within strings
+showtabs=false,                 % show tabs within strings adding particular underscores
+frame=single,           % adds a frame around the code
+tabsize=2,          % sets default tabsize to 2 spaces
+captionpos=b,           % sets the caption-position to bottom
+breaklines=true,        % sets automatic line breaking
+breakatwhitespace=false,    % sets if automatic breaks should only happen at whitespace
+escapeinside={\%*}{*)}          % if you want to add a comment within your code
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\textsc{Computational Science - ITB} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\small Algoritma dan Desain Perangkat Lunak \\ 
+\large Desain Sistem Pembuatan SIM (Surat Izin Mengemudi): \textit{Waterfall Model}\\  % The assignment title
+\horrule{1.5pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+\author{\small Febrie Ahmad A. || 20912008 \\ \small Ridlo W. Wibowo || 20912009} % Your name
+\date{\normalsize\today} % Today's date or a custom date
+
+% -------------------------------------------------------------------------------
+\begin{document}
+
+\maketitle % Print the title
+\underline{\textbf{Introduction :}}
+\begin{itemize}
+	\item Purpose : Pembuatan software yang membantu mempermudah dan memperbaiki sistem pembuatan SIM.
+	\item References : Traffic Management Center Polda Metro Jaya
+\end{itemize}
+
+\underline{\textbf{Overall description :}}
+\begin{itemize}
+	\item Product function : Suatu sistem software yang terpadu, yang membantu user (pemohon, pemberi izin, dan semua pihak terkait) dalam proses pembuatan SIM.
+	\item User characteristic : Masyarakat Indonesia yang berniat membuat SIM, sudah memiliki KTP (usia > 17 tahun).
+	\item Constraints, assumptions and dependencies : Pengguna (pemohon, pengelola pemasuk data, dll) sudah paham cara menggunakan website, proses perpanjangan mengalami proses yang sama dengan proses pembuatan SIM, penilaian tes praktik sudah robotik (menghindari penilaian subjektif dari polisi dan menyamakan sistem pengujian).
+\end{itemize}
+
+\underline{\textbf{Special requirements :}}
+\begin{itemize}
+	\item External interface requirement :
+	\begin{enumerate}
+		\item Seperangkat tes teori $ \rightarrow $ komputer, sistem soal, etc
+		\item Seperangkat tes praktik (otomatisasi) $ \rightarrow $ sensor, etc
+		\item Devices (kamera, scanner, printer)
+		\item printer SIM
+	\end{enumerate}
+	\item Functional requirement :
+	\begin{enumerate}
+		\item Bagian registrasi dan polisi (sistem data)
+		\item Bagian tes teori
+		\item Bagian tes simulasi
+		\item Bagian device scanning SIM dan SIM card nya
+	\end{enumerate}
+	\item Performance requirements : Proses penyimpanan ke database harus cepat, jangan sampai terjadi lagging pada saat input
+	\item Logical database requirement :
+	\begin{enumerate}
+		\item Database dijadikan satu dalam skala nasional agar data tertata dengan baik
+		\item Saling melengkapi dengan database e-KTP (mengingat sudah dimulai penggunaan e-KTP)
+	\end{enumerate}
+	\item Software System attributes :
+	\begin{enumerate}
+		\item Reliability :
+		\begin{itemize}
+			\item \textbf{Bagian daftar/registrasi untuk pemohon} :
+			\begin{itemize}
+				\item Dibuka melalui web, (masuk pake verifikasi email, captcha)
+				\item Ada penjelasan tata cara pembuatan SIM
+				\item Pengisian data diri
+				\item Booking tanggal tes, pilihan tanggal tes tersedia pada bagian info (datang ke kantor polisi)
+				\item Penjelasan tata cara pelaksanaan tes
+				\item Keterangan biaya yang harus dikeluarkan, ada rincian jelas mengenai penggunaan dana tersebut juga media yang bisa digunakan untuk melakukan pembayaran (mis. kartu kredit, rekening polisi setempat, dll)
+				\item Konfirmasi melalui e-mail, file yang dikirimkan berisi bukti telah melakukan registrasi online dan tag jadwal ke kantor polisi yang kemudian dapat di print dan di bawa sebagai nomor antrian
+			\end{itemize}
+			\item \textbf{Bagian petugas kepolisian} :
+			\begin{itemize}
+				\item Web based (berpassword, hanya polisi yang berwenang yang punya akun)
+				\item \textbf{Registrasi ulang :}
+				\begin{itemize}
+					\item Proses pengisian data tinggal membuka dari yang sudah diregistrasikan (jika yg memohon sudah registrasi online sendiri)
+					\item Pengisian manual jika pemohon belum mendaftar secara online
+					\item Checklist surat-surat yang dibutuhkan/diserahkan (fotocopy KTP, Surat Kesehatan)
+				\end{itemize}
+				\item \textbf{Yang lulus (Input Data) :}
+				\begin{itemize}
+					\item Terkoneksi dengan hasil tes teori dan praktik (cek kelulusan)
+					\item Ada koneksi dengan kamera, untuk pengambilan foto
+					\item Ada koneksi dengan mesin pengenal sidik jari (10 jari)
+					\item Ada koneksi dengan pen tablet (untuk proses penandatanganan)
+					\item Ada bagian pengecekan biaya registrasi baik itu e-banking, atau ceklist manual, apabila bayar ditempat
+					\item Bisa mencetak data dalam bentuk hardcopy
+					\item Bisa print SIM
+				\end{itemize}
+			\end{itemize}
+		\end{itemize}
+		\item Availability :
+		\begin{itemize}
+			\item Bagian pendaftaran,user pemohon SIM (24 jam)
+			\item Bagian pengisian data diri(Aktif hanya pada saat waktu kerja saja, agar lebih aman)
+		\end{itemize}
+		\item Security :
+		\begin{itemize}
+			\item Data SIM harus aman, hanya orang-orang tertentu yang bisa meng-edit data, untuk identitas di jalan raya (kasus di jalan raya, kriminal, terorisme, dll)
+			\item Dapat di cetak dalam bentuk hardcopy untuk dokumentasi jikalau terdapat masalah pada system online
+			\item Aman dari hacking (SSL $ \rightarrow $ https, enkripsi harus sebagus e-banking, dll)
+		\end{itemize}
+		\item Maintainability :
+		\begin{itemize}
+			\item Terdapat tombol troubleshoot untuk memudahkan user melaporkan bug yang terjadi pada software
+			\item Back up data rutin dan otomatis
+		\end{itemize}
+		\item Portability :
+		\begin{itemize}
+			\item Terdapat versi mobile
+			\item Dapat diakses melalui PC Tablet
+		\end{itemize}
+	\end{enumerate}
+	\item Other Requirements :
+	\begin{enumerate}
+		\item Tes online
+		\item Tes praktik terotomatisasi (sensor penilai terdapat pada jalan dan mobil tes)
+		\item SIM card (terdapat barcode/QRcode/chip) sehingga dapat di-scan
+		\item Alat scan SIM untuk memudahkan polisi cek keaslian SIM dan datanya
+	\end{enumerate}
+\end{itemize}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

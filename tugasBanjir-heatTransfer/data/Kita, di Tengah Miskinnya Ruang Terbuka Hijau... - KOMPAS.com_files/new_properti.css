@@ -1,0 +1,473 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+*, body			{ margin:0; padding:0px;}
+body			{ background:#ebebeb; font-family:Arial, Helvetica, sans-serif;}
+
+.mg_0a						{ margin:0px auto;}
+.mt-10						{ margin-top:-10px;}
+.mt_75						{ margin-top:75px;}
+.mt_40						{ margin-top:40px;}
+.ml_16						{ margin-left:16px;}
+.ml_130						{ margin-left:130px;}
+.ml_175						{ margin-left:175px;}
+.brd0						{ border:none;}
+.pr_0						{ padding-right:0px;}
+.h130						{ height:130px;}
+
+h5.tanggal, h5.jml_dibaca	{ font:normal 11px arial; color:#898888;}
+.bungkus_properti			{ background:#fff;}
+.w440						{ width:440px;}
+.bg_prop_blue				{ background:#d7f1ff;}
+.brd_bttm1ccc				{ border-bottom:1px solid #CCC;}
+
+.properti_menukanal			{ font:normal 11px Tahoma, Geneva, sans-serif ;color:#0075b0; padding:10px 0px;}
+.properti_menukanal a		{ color:#0075b0; margin:0px 3px; text-decoration:none;}
+.properti_menukanal a:hover { text-decoration:underline;}
+
+/* head_properti*/
+.head_prop					{ background:url(../images/logo_kompasproperti2_v2.gif) no-repeat 10px 10px; height:100px; padding-left:20px;}
+.head_prop, .head_prop a	{ font:normal 11px arial; color: #a7a5a5; text-decoration:none;}
+.head_prop a:hover			{ text-decoration:underline;}
+.head_prop span				{ margin-left:40px;}
+.head_prop span a			{ margin:0px 5px;}
+
+/*menu properti */
+.menu_properti				{ font:bold 15px Arial, Helvetica, sans-serif;}
+.menu_properti a			{ text-decoration:none; color:#b4b4b4; background:url(../images/logo_kompasproperti2_v2.gif) no-repeat center -145px; 
+							  display:block; padding:10px 9px 20px 9px; float:left;}
+.menu_properti a:hover, .menu_properti a.pilih
+							{ color:#000; background:url(../images/logo_kompasproperti2_v2.gif) no-repeat center -216px;}
+
+/*headline properti */
+.hdl_properti img			{ width:650px; height:325px;}
+.hdl_properti #teaser		{ background:#000; padding:10px;}
+.hdl_properti a				{ text-decoration:none;}
+.hdl_properti a:hover		{ text-decoration:underline;}
+.hdl_properti div h4 a		{ color:#3fc2ff; font-size:12px; text-transform:uppercase;}
+.hdl_properti div h1 a	 	{ color:#fff; font-size:22px;  }
+
+
+/*berita properti lain */
+.brt_prop_lain					{}
+.brt_prop_lain .brt_lain		{ display:inline; height:133px; background:#f5f5f5;}
+.brt_prop_lain .sel1			{ border-right:1px solid #e8e8e8; padding:0px 5px 0px 0px; } 
+.brt_prop_lain .sel2			{ border-right:1px solid #e8e8e8; padding:0px 5px 0px 0px; margin-left:5px; } 
+.brt_prop_lain .sel3			{ margin-left:5px; } 
+.brt_prop_lain div img			{ width:140px; height:70px;}
+img.brd1	{ border-bottom:4px solid #926747;}
+img.brd2	{ border-bottom:4px solid #e1a67b;}
+img.brd3	{ border-bottom:4px solid #ffe2a5;}
+.brt_prop_lain div h2			{ margin-top:3px;}
+.brt_prop_lain div h2 a			{ font: bold 12px arial; color: #919191; text-decoration:none;}
+.brt_prop_lain div h2 a:hover	{ text-decoration:underline;}
+
+/* terkini */
+.follow_bar						{ background:url(../images/properti_acc_images.gif) no-repeat top; height:45px; position:absolute; z-index:1px; width: 465px; 
+								  padding-top:10px; margin:15px 0px 0px -15px; overflow:hidden;}
+.follow_bar div 				{ float:right; padding:0px 5px 0px 22px; margin-right:5px;}
+.follow_bar div a				{ font:normal 9px arial; color:#fff; text-decoration:none; }
+.follow_bar div a:hover			{ text-decoration:underline;}
+.follow_bar .fb					{ width:88px;  background:url(../images/properti_acc_images.gif) no-repeat -10px -167px; }
+.follow_bar .tw					{ width:64px;  background:url(../images/properti_acc_images.gif) no-repeat -10px -93px; border-right: 1px solid #96a527;}
+.follow_bar .rss				{ width:47px;  background:url(../images/properti_acc_images.gif) no-repeat -10px -131px; border-right: 1px solid #96a527;}
+
+/* list berita lain */
+ul.listbrtlain				{ list-style:none;}
+ul.listbrtlain li			{ border-bottom: 1px solid #b7b7b7; padding-bottom:5px; margin-top:5px; margin-bottom:20px;}
+ul.listbrtlain h4			{ margin-bottom:0px;}
+ul.listbrtlain h4 a			{ font:normal 11px arial; color: #000; text-decoration:none;}
+ul.listbrtlain h4 a:hover	{ text-decoration:underline;}
+ul.listbrtlain img			{ width: 140px; height:70px; float:left; margin-top:5px;}
+ul.listbrtlain .infobrt		{ margin-left:150px;}
+ul.listbrtlain h3 			{ margin-bottom:5px;}
+ul.listbrtlain h3 a			{ font: bold 20px Arial, Helvetica, sans-serif; color: #191919; text-decoration: none;}
+ul.listbrtlain h3 a:hover	{ color:#666;}
+
+.infobrt p					{ font:normal 12px arial; line-height:14px; margin:3px 0px;}		
+.prop_komen					{ background:url(../images/properti_acc_images.gif) no-repeat -282px -75px; padding-left:25px;  font:normal 11px arial; 
+							  color:#414141; line-height:18px; margin-left:330px; margin-top:15px; }
+.prop_komen2				{ background:url(../images/properti_acc_images.gif) no-repeat -282px -75px; padding-left:25px;  font:normal 11px arial; 
+							  color:#414141; line-height:18px; margin-left:530px; margin-top:15px; }
+
+/*terpopuler_properti   */
+.prop_populer				{ background:#f9f4ee;}
+ul.terpopuler				{ list-style:none;}
+ul.terpopuler li			{ padding:5px 5px 10px 10px;}
+ul.terpopuler h1			{ display:inline; float:left; margin:0px; padding:0px; font:bold 36px Arial, Helvetica, sans-serif; font-style:italic; color:#ded9d1;}
+ul.terpopuler div			{ margin-left:0px; }
+ul.terpopuler h2			{ font: bold 16px arial; margin:5px 0px 2px; }
+ul.terpopuler a				{ text-decoration:none; color:#000;}
+ul.terpopuler a:hover		{ text-decoration:underline;}
+.pop_top					{ background:url(../images/properti_acc2_images.gif) no-repeat 0px 0px; height:45px;}
+.pop_bot					{ background:url(../images/properti_acc2_images.gif) no-repeat 0px -83px; height:45px;}
+
+
+/*balong*/
+.balong_tengah				{ background:#ebebeb;}
+.balong_tengah div			{ padding:5px 5px 0px 5px;}
+.balong_tengah img			{ width:190px; height:96px;}
+.balong_tengah h1			{ font: bold 22px arial; color:#fff;}
+.balong_tengah h2			{ padding-top:15px; letter-spacing:-1px;}
+.balong_tengah h2 a			{ font: bold 14px arial; color:#000; text-decoration:none;}
+.balong_tengah h2 a:hover	{ text-decoration:underline;}
+.balong_tengah p			{ font-size: 11px; margin-top:5px;}
+.balong_tengah div.b_tutup	{ background:url(../images/properti_acc2_images.gif) no-repeat -310px 5px; height:30px; padding:15px 0px 0px 105px;}
+.balong_tengah div.b_tutup a		{ font:normal 10px arial; color:#fff; text-decoration:none;}
+.balong_tengah div.b_tutup a:hover  { text-decoration: underline;}
+
+.b_figur div				{ background:url(../images/properti_acc2_images.gif) no-repeat  0px -170px; }
+.b_figur h1					{ background:#654926; padding:5px 0px 5px 3px;}
+.b_tips div					{ background:url(../images/properti_acc2_images.gif) no-repeat  -250px -170px; }
+.b_tips h1					{ background:#7a8720; padding:5px 0px 5px 3px;}
+
+/*kawasan terpadu */
+.kaw_padu				{}
+.kaw_padu .kw_judul		{ background:url(../images/properti_acc3_images.gif) no-repeat 0px -64px; margin-bottom:6px;}
+.kw_judul span			{ color:#654926; font:bold 18px arial; background:#fff; padding:0px 10px 0px 0px;}
+ul.list_kaw, ul.list_hunian					{ list-style:none;}
+ul.list_kaw li, ul.list_hunian	li			{ display:inline; float:left; margin-right:10px;}
+ul.list_kaw li h5, ul.list_hunian li h5		{ margin:0px 0px 3px 0px;}
+ul.list_kaw li h3, ul.list_hunian li h3		{ margin:5px 0px 0px 0px;}
+ul.list_kaw li h5 a, ul.list_kaw li h3 a, ul.list_hunian li h5 a, ul.list_hunian li h3 a	
+						{ font: bold 12px arial; color:#515151; text-decoration:none;}
+ul.list_kaw li h5 a:hover, ul.list_kaw li h3 a:hover, ul.list_hunian li h5 a:hover, ul.list_hunian li h3 a:hover	
+						{ text-decoration:underline;}
+ul.list_kaw li div		{ width:138px; background:url(../images/properti_acc2_images.gif) no-repeat -506px -158px; padding-top:12px;}
+.kw_tutup				{ background:url(../images/properti_acc3_images.gif) no-repeat 0px -90px; height:35px;}
+
+
+/*hunian */
+.prop_hunian			{}
+.prop_hunian .hn_judul  { background:url(../images/properti_acc3_images.gif) no-repeat 0px -3px;}
+.hn_judul span			{ color:#7a8720; font:bold 18px arial; background:#fff; padding:0px 10px 0px 0px;}
+
+ul.list_hunian			{ list-style:none;}
+ul.list_hunian li		{ display:inline; float:left; margin-right:10px;}
+ul.list_hunian li div	{ width:138px; padding-top:12px;}
+ul.list_hunian li img	{ border-top:5px solid #dee1c7; border-bottom:5px solid #dee1c7; }
+
+/* fengshui */
+.prop_feng			{ background:url(../images/logo_kompasproperti2_v2.gif) no-repeat 0px -516px; height:110px; width:150px; overflow:hidden; padding:70px 20px 20px 140px; }
+.prop_feng p		{ font: normal 11px arial; color:#333; line-height:16px;}
+
+/*konsultasi */
+.konsultasi_prop	{ background:url(../images/logo_kompasproperti2_v2.gif) 0px -307px; width:180px; height:85px; overflow:hidden; padding: 95px 120px 20px 20px;}
+.konsultasi_prop p	{ font: normal 11px arial; color: #333; line-height:16px;}
+
+.prop_feng span	a, .konsultasi_prop span a			{ font: bold 11px arial; color:#b80000; text-decoration:none;}
+.prop_feng span	a:hover, .konsultasi_prop a:hover	{ text-decoration:underline;}
+
+/*footer */
+.prop_footer		 { border-top: 3px solid #d7f1ff; padding:20px 10px 30px 10px; margin-top:30px; 
+  					   background:url(../images/properti_acc3_images.gif) no-repeat 750px  -144px;  }
+.prop_footer a		 { font: normal 11px Tahoma, Geneva, sans-serif; color:#66cbff; text-decoration:none; margin:3px; }
+.prop_footer a:hover { color:#06C;}
+
+/*quicksearch */
+.qsrch				{ background:url(../images/properti_acc4_images.gif) no-repeat -5px -5px; width:275px; height:170px; font-size:11px; padding:30px 0px 0px 25px; 
+				  	  overflow:hidden;}
+.qsrch2				{ background: url(../images/properti_acc3_images.gif) no-repeat -2px -220px; width:605px; height:50px; font-size:11px; padding:28px 20px 0px 25px; 
+				  	  overflow:hidden;}
+					  
+.qs_button a		{ display:block; background:url(../images/properti_acc4_images.gif) no-repeat -5px -570px; width:123px; height:30px; }
+.qs_button a:hover  { background:url(../images/properti_acc4_images.gif) no-repeat -134px -569px;}
+.qs_button2 a		{ display:block; background:url(../images/properti_acc3_images.gif) no-repeat -689px -231px; width:80px; height:30px; }
+.qs_button2 a:hover  { background:url(../images/properti_acc3_images.gif) no-repeat -689px -265px;}
+
+/*arsitektur */
+.judul_arst	 				{ background:url(../images/properti_acc4_images.gif) no-repeat -10px -226px; height:22px;}
+ul.prop_arsitektur 			{ list-style:none;}
+ul.prop_arsitektur img		{ float:left; width:140px; height:70px;}
+ul.prop_arsitektur li		{ background:#f2f2f2; margin-bottom:2px; clear:both}
+ul.prop_arsitektur a		{ font: bold 12px Arial, Helvetica, sans-serif; color:#333; text-decoration:none; }
+ul.prop_arsitektur a:hover	{ text-decoration:underline;}
+ul.prop_arsitektur h3		{ float:right; width:130px; height:50px;  margin:10px; overflow:hidden;}
+
+/*konstruksi */
+.prop_kon				{ border: 1px solid #c8c8c8; padding:10px;}
+.prop_kon h1			{ font: bold 22px Arial, Helvetica, sans-serif; color:#c80000; border-bottom:1px solid #c8c8c8; margin-bottom:15px;}
+.prop_kon img			{ width:100px; height:50px; float:left;}
+.prop_kon ul			{ list-style:none;}
+.prop_kon ul li			{ margin:10px 0px; }
+.prop_kon h3 			{ float:right; width: 160px;}
+.prop_kon h3 a			{ font: bold 12px Arial, Helvetica, sans-serif; color:#000; text-decoration:none;}
+.prop_kon h3 a:hover	{ text-decoration:underline;}
+
+
+/*video */
+.prop_video					{ background:#f2f2f2;  }
+.judul_video				{ background:url(../images/properti_acc3_images.gif) no-repeat -338px -160px; height:25px;}
+
+/*
+
+.sel_videoprop				{ width:120px; margin:0px 5px;}
+.sel_videoprop h3 a			{ font:bold 12px arial; color:#000; text-decoration:none;}
+.sel_videoprop h3 a:hover 	{ text-decoration:underline;}
+*/
+
+/* opini */
+.prop_opini				{ border:1px solid #c8c8c8; padding:10px 5px;}
+.judul_opini_prop		{ background:url(../images/properti_acc4_images.gif) no-repeat -5px -308px; height:40px; margin-bottom:5px; }
+.prop_opini	 img		{ float:left; padding-left:10px;}
+.prop_opini	 p			{ font-size:11px; color:#4e1f19; margin-left:110px; margin-bottom:8px;}
+
+/*kolom properti */
+.kolom_properti			{ background:url(../images/properti_acc4_images.gif) no-repeat -5px -360px; height:73px;  padding: 72px 10px 10px 11px; overflow:hidden;}
+.kolom_properti p		{ font-size:11px; line-height:14px; }
+
+/* simulasi */
+.jud_prop_sim			{ background:url(../images/properti_acc4_images.gif) no-repeat -5px -528px;  height:25px; border-bottom:4px solid #fff;}
+ul.prop_sim				{ list-style:none;}
+ul.prop_sim				{ background:#ededed; }
+ul.prop_sim	 li			{ border-top:2px solid #fff;}
+ul.prop_sim	 li img		{ float:left; }
+ul.prop_sim	 li h3		{ float:right; width:130px; margin:15px 0px 0px 2px;}
+ul.prop_sim	 li h3 a	{ font: bold 12px Tahoma, Geneva, sans-serif;  color:#7e7e7e; text-decoration:none; }
+ul.prop_sim	 li h3 a:hover { text-decoration:underline;}
+
+
+/*sub index */
+.subidx_titlebar		{ position:absolute; z-index:10; width:665px; margin-left:-15px;}
+.ttbar_upper			{ background:#fafafa; border-bottom:4px solid #7d8a21;  padding:5px 0px 2px 10px;}
+.ttbar_upper h1 		{ float:left; font:bold 28px arial; color: #7d8a21;}
+.ttbar_upper h5			{ float:right; height:26px; margin-top:5px; padding-left:22px; }
+.ttbar_upper h5.sh_fb	{ background:url(../images/properti_acc_images.gif) no-repeat -404px -105px; width:110px; }
+.ttbar_upper h5.sh_tw	{ background:url(../images/properti_acc_images.gif) no-repeat -284px -153px; width:78px; 
+						  border-right: 1px solid #e3e3e3;  margin-right:8px; }
+.ttbar_upper h5.sh_rss	{ background:url(../images/properti_acc_images.gif) no-repeat -284px -106px; width:60px; margin-right:3px;  border-right: 1px solid #e3e3e3;  }
+.ttbar_upper a			{ font:normal 9px arial; color: #949494; text-decoration:none;  }
+.ttbar_upper a:hover	{ text-decoration:underline;}
+.ttbar_trngl			{ background:url(../images/properti_acc_images.gif) no-repeat -442px -79px; width:30px; height:10px; margin-left:30px;}
+
+/* paginating properti */
+.paging_prop				 { margin:15px 0px 20px 0px; text-align:right;}
+.paging_prop a				 { font:bold 12px arial; color:#fff; background:#cdcdcd; text-decoration:none; padding:4px 5px; margin-left:3px;}
+.paging_prop a:hover, 
+.paging_prop a.selected		 { background:#ff1d1d;}
+
+
+/*prop_konten */
+.prop_konten				{ line-height:16px; }
+.prop_konten p				{ margin:0px 0px 12px 0px;}
+.prop_konten h1				{ font:bold 30px Arial, Helvetica, sans-serif;}
+.prop_konten h5.tanggal		{ color:#ff642f; margin:0px 0px 10px 0px}	
+
+.img_prop_info				{ margin-bottom:10px;}
+.img_prop_info img			{ margin-bottom:3px;}
+.img_prop_info p			{ float:left; width:500px; font:normal 11px arial; color: #767676; }
+.img_prop_info h5			{ float:right; font:normal 11px arial; color: #767676; }
+
+.prop_brt_terkait			{ width:310px; float:right; margin: 0px 0px 10px 10px; }
+.prop_brt_terkait h2		{ font:bold 13px Arial, Helvetica, sans-serif; color:#ff642f; padding:5px 0px 5px 10px; border-top:1px solid #e5e5e5; 
+					          border-bottom:1px solid #e5e5e5}
+.prop_brt_terkait ul			{ list-style: none; margin:5px 0px;}
+.prop_brt_terkait li			{ font: bold 12px Arial, Helvetica, sans-serif; color:#666; margin-bottom:5px; 
+								  background:url(../images/properti_acc3_images.gif) no-repeat -704px -108px; padding-left:15px;}
+.prop_brt_terkait li a			{ font: normal 12px Arial, Helvetica, sans-serif; color:#12739e; text-decoration:none; }
+.prop_brt_terkait li a:hover	{ text-decoration:underline;}
+
+/*hasil pencarian */
+.sort_hasilcari, .sort_hasilcari h5			{ font:normal 11px Arial, Helvetica, sans-serif; }
+
+ul.hasil_cari					{ margin:20px 0px 0px 0px; list-style:none;}
+ul.hasil_cari li				{ margin:10px 0px; border-bottom: 1px solid #d8d8d8; padding:10px 0px 20px 0px; margin-right:10px;}
+ul.hasil_cari h2 a				{ font: bold 18px Arial; color:#315e00; margin-left:5px;}
+ul.hasil_cari h2 a:hover		{ color:#54a200;}	
+ul.hasil_cari h3				{ font: bold 14px Arial; color:#fe8900; margin:15px 0px 5px 0px;}
+ul.hasil_cari h4				{ font: normal 11px Arial; color:#999; margin-bottom:5px;}	
+ul.hasil_cari p					{ font: normal 12px Arial; color:#000000; line-height:16px; margin-bottom:5px;}
+
+
+.hasilcari_foto					{ width:120px; height:105px; background:url(../images/properti_acc3_images.gif) no-repeat -8px -320px; padding:20px 33px 0px 17px; 
+								  float:left; }
+.hasilcari_foto	img 			{ width:125px; height:63px;}
+.hasilcari_foto h5				{ font: normal 11px arial; margin-top:5px; text-align:right;}
+
+.button_detail_prop a			{ display:block; background:url(../images/properti_acc3_images.gif) no-repeat -207px -350px; width:126px; height:24px; }
+.button_detail_prop a:hover		{ background:url(../images/properti_acc3_images.gif) no-repeat -207px -385px; }
+
+.prop_dev_section				{ width:160px;  float:right; color:#554a3c; margin-left:10px; font-size:12px; }
+
+.navigasi_hasilcari				{ border:1px solid #999; font:normal 11px Arial; padding:4px 4px 4px 4px; background:#ebebeb; color:#999; height:20px; overflow:hidden;
+								  margin-right:10px;}
+.navigasi_hasilcari div			{ line-height:10px; }
+.navigasi_hasilcari div	 a		{ text-decoration:none; color:#393;}
+.navigasi_hasilcari div	 a:hover { text-decoration:underline;}
+
+
+/*help us */
+.help_us_prop			{ background:#fff4e6; padding:15px 20px;}
+.help_us_prop h4		{ font:bold 14px Arial, Helvetica, sans-serif;}
+.help_us_prop ul		{ font-size:11px; list-style:square !important;;} 
+.help_us_prop li		{ font-style: italic; margin:5px 0px}
+
+/*print detail */
+ul.print_det_prop			 { list-style:none; font-size:11px;}
+ul.print_det_prop a			 { text-decoration:none; color:#006699; padding:5px 0px 5px 22px;  line-height:10px; display:block;}
+ul.print_det_prop a:hover	 { color:#603;}
+ul.print_det_prop a.hl_print { background:url(../images/properti_acc3_images.gif) -497px -342px;}
+ul.print_det_prop a.hl_mail  { background:url(../images/properti_acc3_images.gif) -497px -372px;}	
+ul.print_det_prop a.hl_fave  { background:url(../images/properti_acc3_images.gif) -497px -398px;}	
+ul.print_det_prop li		 {  border-bottom: 1px dotted #cccccc; padding:4px 0px;}
+
+/*item prop*/
+.itm_prop					{ font-size:12px; }
+.itm_prop h2 				{ font: bold 14px Arial, Helvetica, sans-serif; color: #6a3e00;}
+.itm_prop h3				{ font: bold 16px Arial, Helvetica, sans-serif; color:#fe8900;}
+.button_lihatpeta a			{ width:78px; height:25px; background:url(../images/properti_acc3_images.gif) no-repeat -360px -350px; display:block;}
+.button_lihatpeta a:hover 	{ background:url(../images/properti_acc3_images.gif) no-repeat -360px -385px;}
+
+
+/* dskrps_prop */
+.dskrps_prop			{ }
+.dskrps_prop h2, .det_prop h2
+						{ font: normal 22px Tahoma, Geneva, sans-serif; color:#315e00; border-bottom:2px solid #e1e1e1; padding:0px 0px 10px 0px; 
+						  margin:10px 0px 5px 0px;}
+.dskrps_prop h3 		{ font: bold 16px Arial, Helvetica, sans-serif; color:#6a3e00;}
+.dskrps_prop p			{ font-size:11px;}
+
+/* detail properti */
+.det_prop table		{ margin:0px; padding:0px; font-size:11px;}
+.det_prop td		{ padding:0px 10px 5px 0px;}
+
+
+/*form-developer */
+.form_developer				{ background:#fcf6e8; padding:20px; font-size:11px;}
+.form_developer	h3			{ font: bold 14px arial;}
+.form_developer table		{ margin-top:10px;}
+.form_developer td			{ padding:0px 10px 5px 0px; }
+
+
+/*fot_detail*/
+.fot_detail							{ padding:10px;}
+.fot_detail	a img					{ border:none;}
+.fot_detail	img#det_utama 			{ width:440px; height:auto; }
+.fot_sel							{ margin: 0px 10px 10px 0px;}
+.fot_sel img						{ width:80px; height:auto; }
+
+/*sub kolom*/
+.w170		{ width:170px; }
+.ml_40		{ margin-left:40px;}
+
+.sub_kolom					{overflow:hidden; border: 1px solid #f5f5f5}
+.sub_kolom img				{ float:left; }
+
+h2.warna1, .bg_profil_1		{ background:#c59f9f; border-bottom:4px solid #b48383;}
+h2.warna2, .bg_profil_2		{ background:#9fa5c5; border-bottom:4px solid #838bb4;}
+h2.warna3, .bg_profil_3		{ background:#a9c59f; border-bottom:4px solid #8fb483;}
+h2.warna4, .bg_profil_4		{ background:#9fc5c5; border-bottom:4px solid #83b4b4;}
+
+.sub_kolom h2				{ padding:5px 0px 2px 10px; }
+.sub_kolom h2 a				{ font:bold 16px Arial, Helvetica, sans-serif; color:#7d8a21; text-decoration:none; color:#fff;}
+.sub_kolom h2 a:hover 		{ color:#fff000;}
+
+.sub_kolom_1st_news			{ margin-left:95px; font-size:11px; color:#7a7a7a; }
+.sub_kolom_1st_news	span	{ font:bold 12px Arial, Helvetica, sans-serif;}
+.sub_kolom_1st_news h3	 	{ margin:4px 0px;}
+.sub_kolom_1st_news h3 a	{ font:bold 14px Arial, Helvetica, sans-serif; color:#333; text-decoration:none; }
+.sub_kolom_1st_news h3 a:hover	{ text-decoration:underline;}
+
+.sub_kolom ul			{ list-style:none;}
+.sub_kolom li			{ background:#f5f5f5 url(../images/tribullet.gif) no-repeat left; padding:6px 3px 6px 24px; border-top: 1px solid #fff;}
+.sub_kolom li a			{ display:block; text-decoration:none; color:#7a7a7a; font:bold 14px arial; letter-spacing:-1px;}
+.sub_kolom li a:hover	 { color:#333;}
+
+.sel_video 			{ width:170px; display:block;  float:left; margin:10px;}
+.sel_video img		{ width:170px; height:110px;}
+.sel_video a		{ font:bold 12px Arial, Helvetica, sans-serif; color: #336600; text-decoration:none;}
+.sel_video a:hover	{ text-decoration:underline;}
+.sel_video h5		{ margin:5px 0px;}
+
+.cari_iklan			{ background:#e0d9bc url(../images/jud_cariiklan.gif) no-repeat top left; font:bold 12px Arial, Helvetica, sans-serif; 
+  					  padding:20px 20px 10px 20px; color:#600; height:34px;  }	
+
+ul.baris_iklan			{ list-style:none; margin:20px 0px 0px 0px; padding:0px;}
+ul.baris_iklan li		{ border: 1px solid #bcbcbc; margin-bottom:15px;}
+ul.baris_iklan div		{ font:bold 12px Arial, Helvetica, sans-serif;  }
+ul.baris_iklan p		{ padding:5px 10px; font-size:12px;}
+ul.baris_iklan h5		{ font:normal 11px Arial, Helvetica, sans-serif; color:#666; background:#f0f0f0; border-top:1px solid #ccc; padding:3px 5px;}
+.tema_iklan				{ width:490px; background:#e0d9bc; padding:5px 0px 5px 10px; color:#000;}
+.kat_iklan				{ width:148px; background:#996600; padding:5px 0px; color:#fff;}
+
+
+p.lead_sub_index		 { color:#fff; font-size:12px; margin-top:10px;}
+p.lead_sub_index a		 { text-decoration:none; color:#fff; font-weight:bold;}
+p.lead_sub_index a:hover { text-decoration:underline;}
+
+
+.ttbar_upper h1 span	{ font-size:22px; letter-spacing:-1px;}
+
+		/*{ background: #c59f9f; border-bottom:4px solid #b48383;}*/
+
+.profil_box	img		{ width:320px;}
+.profil_box	h2		{ font:bold 16px Arial, Helvetica, sans-serif;}
+.profil_box	p 		{ font-size: 11px; line-height:16px;}
+
+.sel_kolom				{}
+.sel_kolom h2 a			{ font: bold 18px Arial, Helvetica, sans-serif; color:#333; text-decoration:none; }
+.sel_kolom h2 a:hover	{ color:#666;}
+.sel_kolom p			{ padding:5px 0px; font-size:12px;}
+ul.sel_kolom			{ list-style:none; margin:0px; padding:0px;}
+ul.sel_kolom li			{ margin-bottom: 10px; padding-bottom:10px; background:#f7f7f7; padding:10px 20px;}
+
+
+/* tambahan 2012 05 15 */
+.menu_properti span a {
+    background: url("../images/logo_kompasproperti2_v2.gif") no-repeat scroll center -177px transparent;
+    color: #F1965F;
+    display: block;
+    float: left;
+    padding: 10px 9px 20px;
+    text-decoration: none;
+}
+.menu_properti span a:hover, .menu_properti span a.pilih {
+    background: url("../images/logo_kompasproperti2_v2.gif") no-repeat scroll center -101px transparent;
+    color: #CA1B1B;
+}
+
+
+/* foto 260 */
+
+.galeri360	{clear:both; margin-top:20px; }
+.box360					{ background:#c7c7c7; padding:8px 0px;}
+.img360_box				{ width: 945px; margin:0px auto;}
+.galeri360	 h2			{ font: bold 24px Arial, Helvetica, sans-serif; color:#67b334; margin-bottom:10px; margin-bottom:5px; padding-bottom:10px;}	
+.galeri360 h3			{ font: normal 30px Arial, Helvetica, sans-serif; color: #000; margin-bottom:5px;}
+.tag_img_roll				{ text-align: left; font-size:12px; margin:10px 10px 0px 10px; line-height:16px;}
+.roll_cell					{ width:198px; float:left; display:inline; margin-right:18px; height:160px; overflow:hidden;}
+.roll_cell div				{ width:198px; height:98px; overflow:hidden; margin-bottom:5px;}
+.roll_cell a					{ text-decoration:none; color:#000;}
+.roll_cell a:hover		{ text-decoration:underline;}
+.roll_cell h3				{ font-size:14px; text-align:left; font-weight:normal; }
+
+
+
+/* sel head */
+.milih 			{ position:absolute; z-index:324; margin:10px 0px 0px 580px}
+.milih ul			{ list-style:none;}
+.milih li			{ display:inline;}
+.milih a			{ display:block; background:url(../images/bullet.png) no-repeat top; width:20px; height:20px; margin-right:10px; float:left}
+.milih a:hover, .milih a.selected		{ background:url(../images/bullet.png) no-repeat bottom;}
+
+
+.wrap_head_besar		{ width:650px; }
+.sel_head				{ width:650px; height:386px; clear:both; position:relative; } 
+.img_head				{ width:650px; height:386px; overflow:hidden;}
+.img_head	img		{ width:650px; height:386px;}
+.fixbot					{ background:#000; padding:8px 10px 12px 10px; position:absolute; width:630px; bottom:0px;} 
+.sel_head_judul		{ width:650px;   }
+.sel_head_judul h1	{ margin:0px; padding:0px; font-size:18px; color:#FFF; line-height:20px;}
+.sel_head_judul a	{ color:#fff; text-decoration:none;}
+.sel_head_judul a:hover		{ color:#FF0}
+.sel_head_judul h4	{ margin:0px; padding:0px; font-size:11px; color:#F90; font-weight:normal; margin-bottom:4px;}
+
+
+.hidstyle{  
+	position: absolute;
+	top: 20px;
+	margin-left:20px;
+	opacity: .6;
+}
+ 

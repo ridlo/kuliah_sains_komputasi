@@ -1,0 +1,5 @@
+# gnuplot input file GA for TSP
+set xrange [-10:110]
+set yrange [-10:110]
+set nokey
+plot "gaTSP.txt" with lines lc 3, "gaTSP.txt"

@@ -1,0 +1,31 @@
+Introduction (Sistem Pelaporan Akademik)
+	Purpose: sistem yang memberikan informasi mengenai kondisi studi mahasiswa
+	System overview: sistem dapat memberikan informasi ke berbagai pihak terkait studi mahasiswa sesuai hubungannya dengan mahasiswa
+	External Entity: Sistem Keuangan, Sistem Akademik, Sistem Lembaga Kemahasiswaan, Mahasiswa, Orang Tua/Wali, Dosen Wali, Ketua Program Studi, Karyawan Tata Usaha
+
+Overall description
+	Product perspective
+		User Interfaces: memberikan informasi melalui media website untuk mahasiswa, dosen wali, kaprodi, dan karyawan TU
+		Communication Interfaces: memberikan informasi dan peringatan melalui post, pesan singkat dan email
+	User characteristics: 
+		Mahasiswa: bisa menggunakan media internet, manajemen waktu masih buruk sehingga diperlukan pengingat
+		Orang Tua: biasanya tidak mahir menggunakan media internet, membutuhkan laporan akademik anaknya, juga laporan keuangan dan apabila terjadi kasus
+		Dosen Wali: bisa menggunakan media internet, membutuhkan informasi akademik mahasiswa perwaliannya
+		Ketua Prodi: bisa menggunakan media internet, membutuhkan informasi akademik mahasiswa progam studinya untuk keperluan pengawasan
+		Karyawan TU: bisa menggunakan media internet, membutuhkan informasi akademik mahasiswa program studi untuk keperluan bantuan print dan pelaporan
+	Constraints, assumptions and dependencies
+		constraints: pelaporan hanya meliputi mata kuliah (yang harus diambil, belum diambil dan sudah diambil), nilai, kasus akademik, nonakademik dan keuangan
+		assumptions: telah ada sistem pendukung yang butuhkan, kantor pos sudah menggunakan teknologi yang dibutuhkan
+		dependencies: sistem akademik, sistem keuangan, dan sistem lembaga kemahasiswaan
+	
+Specific requirements
+	External interface requirements
+		SMS Gateway
+		Post Gateway
+		Koneksi jaringan ke sistem yang lain
+	Functional requirements
+		Web service untuk masing-masing user sesuai kebutuhannya
+	Performance requirements
+		dapat di akses ribuan orang sekali waktu
+		secure
+		

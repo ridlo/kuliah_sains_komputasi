@@ -1,0 +1,5 @@
+# gnuplot input file
+set xrange [1:4]
+set xlabel "x"
+set ylabel "f(x)"
+plot "1dintMonte_data.txt" with dots, cos(x**2) + log(x) - 1. lt 1 lc 3

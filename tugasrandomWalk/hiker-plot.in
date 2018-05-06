@@ -1,0 +1,7 @@
+set term png
+set output "hiker-plot-100.png"
+set parametric
+set xrange [-100:100]
+set yrange [-100:100]
+set size square
+plot [0:2*pi] 100*sin(t),100*cos(t) notitle, "hiker-out.txt" w l title "path"

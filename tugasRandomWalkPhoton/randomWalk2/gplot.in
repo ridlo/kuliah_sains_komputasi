@@ -1,0 +1,7 @@
+f(x) = a*x**b
+fit f(x) "konstan" via a, b
+set log x
+set log y
+set xlabel "R (meter)"
+set ylabel "Scaled t_mode"
+plot "konstan" title "", f(x)

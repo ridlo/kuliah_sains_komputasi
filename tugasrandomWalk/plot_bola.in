@@ -1,0 +1,17 @@
+# gnuplot input file
+set term wxt size 800,600
+set parametric
+set angle degree
+set urange [0:360]
+set vrange [-90:90]
+set isosample 12,11
+set ticslevel 0
+#set xtics -0.06,0.02,0.06
+#set ytics -0.06,0.02,0.06
+set size 0.7,1.0
+set nokey
+a=0.1
+fx(u,v)=cos(u)*cos(v)
+fy(u,v)=sin(u)*cos(v)
+fz(v)=sin(v)
+splot a*fx(u,v),a*fy(u,v),a*fz(v), "bola.txt" w d lc 3

@@ -1,0 +1,7 @@
+# gnuplot file input
+set size ratio -1
+set xrange [0:31]
+set yrange [0:8]
+set xlabel "x"
+set ylabel "f(x)"
+plot "curve1-spline-plot.txt" w l title "curve 1", "curve2-spline-plot.txt" w l title "curve 2", "curve3-spline-plot.txt" w l title "curve 3"

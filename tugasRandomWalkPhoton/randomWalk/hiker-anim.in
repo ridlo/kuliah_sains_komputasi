@@ -1,0 +1,18 @@
+reset
+set term gif animate size 800,600
+set output "photon-animation.gif"
+set parametric
+set angle degree
+set urange [0:360]
+set vrange [-90:90]
+set isosample 12,11
+set ticslevel 0
+set size 0.7,1.0
+set nokey
+a=0.05
+fx(u,v)=cos(u)*cos(v)
+fy(u,v)=sin(u)*cos(v)
+fz(v)=sin(v)
+i=0
+n=5000
+load "hiker-animate"

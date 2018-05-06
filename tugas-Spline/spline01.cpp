@@ -1,0 +1,166 @@
+#include <iostream>
+#include <stdlib.h>
+#include <math.h>
+#include <fstream>
+using namespace std;
+
+double x[100], y[100]; // data
+//double A[100][100]; // Ac=alpha
+double L[100], U[100], z[100], c[100], alpha[100], h[100];
+double b[100], d[100]; // konstanta = y, b, c, d
+int N=-1, n; // inisiasi jumlah data (N -> N = n+1)
+double FPO, FPN;
+
+void natural();
+void clamped();
+void plot();
+double fx(double a, double b, double c, double d, double xi, double xh);
+void spline_plot();
+void fnatural();
+void fclamped();
+
+int main(){ 
+    cout << "#### Cubic Spline Interpolation ####\n";
+
+    // baca data
+    ifstream read("data.txt");
+    while (!read.eof()){
+        N += 1;
+        read >> x[N] >> y[N];
+        //cout << x[N] << " " << y[N] << endl; 
+    }
+    read.close();
+    cout << "Jumlah data : " << N << endl;
+    n = N-1;
+    //for (int i=0;i<n;i++){cout << x[i] << " " << y[i] << "\n";}
+        
+    // pilihan metode spline
+    int ans;
+    cout << "Choose the method: \n";
+    cout << "1. Natural Cubic Spline\n";
+    cout << "2. Clamped Cubic Spline\n";
+    cout << "3. Both\n";
+    cout << "Answer (1/2/3) : "; cin >> ans;
+    if (ans == 1){fnatural();}
+    else if (ans == 2){fclamped();}
+    else if (ans == 3){fnatural(); fclamped();}
+    else {cout << "Cancel program ... \n";}
+
+    return 0;
+}
+
+void fnatural(){
+    cout << "### Natural Cubic Spline\n";
+    natural(); 
+    spline_plot(); 
+    cout << "Change data-spline.txt ...\n";
+    plot();
+    cout << "Finish ...\n";
+}
+
+void fclamped(){
+    cout << "### Clamped Cubic Spline\n";
+    cout << "f'(x[0]) = "; cin >> FPO;
+    cout << "f'(x[N]) = "; cin >> FPN;
+    clamped(); 
+    spline_plot();
+    cout << "Change data-spline.txt ...\n";
+    plot();
+    cout << "Finish ...\n";
+}
+
+void natural(){
+    for (int i=0;i<n;i++){h[i] = x[i+1] - x[i];}
+    for (int i=1;i<n;i++){
+        alpha[i] = (3./h[i])*(y[i+1] - y[i]) - (3./h[i-1])*(y[i] - y[i-1]);}
+    
+    // Crout method
+    L[0]=1.; U[0]=0.; z[0]=0.;
+    for (int i=1;i<n;i++){
+        L[i] = 2.*(x[i+1] - x[i-1]) - h[i-1]*U[i-1];
+        U[i] = h[i]/L[i];
+        z[i] = (alpha[i] - (h[i-1]*z[i-1]))/L[i];}
+    
+    L[n]=1.; z[n]=0.; c[n]=0.;
+    for (int j=n-1;j>=0;j--){
+        c[j] = z[j] - U[j]*c[j+1];
+        b[j] = (y[j+1] - y[j])/h[j] - h[j]*(c[j+1] + 2.*c[j])/3.;
+        d[j] = (c[j+1] - c[j])/(3.*h[j]);}
+    
+    // output file -> konstanta
+    ofstream out("natural.txt");
+    for (int i=0;i<n;i++){
+        out << y[i] << " " << b[i] << " " << c[i] << " " << d[i] << endl;}
+    out.close();
+    // output file -> fungsi
+    ofstream outf("fungsi-natural.txt");
+    for (int i=0;i<n;i++){
+        outf << "S"<<i<<"(x) = "<<y[i]<<" + "<<b[i]<<"*(x - "<<x[i]<<") + "<<c[i]<<"*(x - "<<x[i]<<")**2. + "<<d[i]<<"*(x - "<<x[i]<<")**3." << endl;}
+    outf.close();
+}
+
+void clamped(){
+    for (int i=0;i<n;i++){h[i] = x[i+1] - x[i];}
+    
+    alpha[0] = 3.*(y[1] - y[0])/h[0] - 3.*FPO;
+    alpha[n] = 3.*FPN - 3.*(y[n] - y[n-1])/h[n-1];
+    for (int i=1;i<n;i++){
+        alpha[i] = (3./h[i])*(y[i+1] - y[i]) - (3./h[i-1])*(y[i] - y[i-1]);}
+    
+    // Crout method
+    L[0]=2.*h[0]; U[0]=0.5; z[0]=alpha[0]/L[0];
+    for (int i=1;i<n;i++){
+        L[i] = 2.*(x[i+1] - x[i-1]) - h[i-1]*U[i-1];
+        U[i] = h[i]/L[i];
+        z[i] = (alpha[i] - (h[i-1]*z[i-1]))/L[i];}
+
+    L[n]= h[n-1]*(2. - U[n-1]); 
+    z[n]= (alpha[n] - h[n-1]*z[n-1])/L[n];
+    c[n]= z[n];    
+    for (int j=n-1;j>=0;j--){
+        c[j] = z[j] - U[j]*c[j+1];
+        b[j] = (y[j+1] - y[j])/h[j] - h[j]*(c[j+1] + 2.*c[j])/3.;
+        d[j] = (c[j+1] - c[j])/(3.*h[j]);}
+    
+    // output file -> konstanta
+    ofstream out("clamped.txt");
+    for (int i=0;i<n;i++){
+        out << y[i] << " " << b[i] << " " << c[i] << " " << d[i] << endl;}
+    out.close();
+    // output file -> fungsi
+    ofstream outf("fungsi-clamped.txt");
+    for (int i=0;i<n;i++){
+        outf << "S"<<i<<"(x) = "<<y[i]<<" + "<<b[i]<<"*(x - "<<x[i]<<") + "<<c[i]<<"*(x - "<<x[i]<<")**2. + "<<d[i]<<"*(x - "<<x[i]<<")**3." << endl;}
+    outf.close();
+}
+
+double fx(double a, double b, double c, double d, double xi, double xh){
+    return a + b*(xi-xh) + c*(xi-xh)*(xi-xh) + d*(xi-xh)*(xi-xh)*(xi-xh);}
+
+void spline_plot(){
+    double xi=x[0];
+    double xf=x[n];
+    double yi=y[0];
+    int jum = 300;
+    double dx = (xf-xi)/jum;
+
+    ofstream splineOut;
+    splineOut.open("data-spline.txt");
+    splineOut << xi << " " << yi << endl;
+    for (int i=0;i<jum;i++){
+        xi = xi+dx;
+        for (int j=0;j<n;j++){
+            if (xi >= x[j] && xi < x[j+1]){
+                yi = fx(y[j], b[j], c[j], d[j], xi, x[j]);
+                splineOut << xi << " " << yi << endl;}}}
+    splineOut.close();
+}
+
+void plot(){
+    ofstream ploter("plot.in");
+    ploter << "# gnuplot input file\n";
+    ploter << "plot \"data.txt\", \"data-spline.txt\" w d lc 3 \n";
+    ploter.close();
+    
+    system("gnuplot -persist < plot.in");
+}

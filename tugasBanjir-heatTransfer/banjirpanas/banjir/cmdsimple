@@ -1,0 +1,3 @@
+g++ ./modelBanjirRKF45.cpp -o modelBanjirRKF45
+./modelBanjirRKF45 > modelBanjir
+gnuplot -persist < gplot

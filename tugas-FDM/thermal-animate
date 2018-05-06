@@ -1,0 +1,3 @@
+plot "eksak-out.txt" using 1:2 index i smooth csplines title sprintf("t = %f exact", (i*0.5/10)), "CN-out.txt" using 1:2 index i title "CN", "btcs-out.txt" using 1:2 index i title "BTCS", "ftcs-out.txt" using 1:2 index i title "FTCS"
+i=i+1
+if (i < n) reread

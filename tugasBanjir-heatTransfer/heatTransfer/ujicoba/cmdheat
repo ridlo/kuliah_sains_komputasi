@@ -1,0 +1,3 @@
+g++ panas2.cpp -o panas2
+./panas2 > outpanas2
+gnuplot -persist < gnuplot.in

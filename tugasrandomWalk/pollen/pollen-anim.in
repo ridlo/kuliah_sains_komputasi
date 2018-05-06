@@ -1,0 +1,10 @@
+reset
+set term gif animate size 500,500
+set output "pollen-animate.gif"
+set size square
+i=1
+n=1000
+set xrange [0:100]
+set yrange [0:100]
+set zrange [0:100]
+load "pollen-animate"

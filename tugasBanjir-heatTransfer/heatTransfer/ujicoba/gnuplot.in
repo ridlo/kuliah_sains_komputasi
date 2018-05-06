@@ -1,0 +1,4 @@
+set title "testing program untuk fungsi y\" = -y"
+set xlabel "x (radian)"
+set ylabel "y = sin(x)"
+plot "outpanas2" with lines, sin(x) with lines

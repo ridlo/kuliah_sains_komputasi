@@ -1,0 +1,3 @@
+g++ banjir.cpp -o banjir
+./banjir > outbanjir
+gnuplot -persist < gnuplot.in

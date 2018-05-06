@@ -1,0 +1,7 @@
+# gnuplot input file
+set xrange [-2:1]
+set yrange [-1:2]
+set xlabel "x"
+set ylabel "y"
+set zlabel "f(x, y)"
+splot "2dintMonte_data.txt" with dots, x*y + y*x*x  + 1. lc 3

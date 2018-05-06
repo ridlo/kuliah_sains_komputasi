@@ -1,0 +1,8 @@
+reset
+set term gif animate
+set output "bungee.gif"
+i=0
+n=10001
+set xrange [0:17]
+set yrange [0:82]
+load "animate.bungee"

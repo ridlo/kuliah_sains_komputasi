@@ -1,0 +1,11 @@
+# Gnuplot input file
+#set samples 20
+#set isosamples 21
+#set cntrparam levels 20
+set xrange [-1:3]
+set yrange [-20:5]
+set contour base
+#set nosurface
+#set view 0,0
+#splot 0.5*sin(x*y) - 0.25*y/pi - 0.5*x
+splot (1.-0.25/x)*(exp(2*x) - exp(1)) + (exp(1)/pi*y) - 2*exp(1)*x

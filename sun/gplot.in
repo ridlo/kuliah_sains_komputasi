@@ -1,0 +1,9 @@
+a = 1000
+b = 1.1
+f(x) = a*x**b
+fit f(x) "fit-lin4.txt" via a, b
+set log x
+set log y
+set xlabel "Rrad (meter)"
+set ylabel "Scaled t_mode"
+plot "fit-lin4.txt" title "", f(x)

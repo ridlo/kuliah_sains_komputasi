@@ -1,0 +1,122 @@
+
+
+*******************************************************************************
+Mon Dec  3 06:18:57 2012
+
+
+FIT:    data read from "table.txt"
+        format = z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 65328.8           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.390717
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 12 iterations the fit converged.
+final sum of squares of residuals : 1.35918
+rel. change during last iteration : -7.46474e-09
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.475952
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.22653
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 99.7558          +/- 0.1983       (0.1988%)
+b               = 2597.42          +/- 323.3        (12.45%)
+c               = 30.9772          +/- 0.4804       (1.551%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.162  1.000 
+c              -0.223  0.981  1.000 
+
+
+*******************************************************************************
+Mon Dec  3 06:20:35 2012
+
+
+FIT:    data read from "table.txt"
+        format = z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 17278.6           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0
+
+initial set of free parameter values
+
+a               = 99.7558
+b               = 2597.42
+BREAK:          Singular matrix in Givens()
+
+
+
+*******************************************************************************
+Mon Dec  3 06:20:55 2012
+
+
+FIT:    data read from "table.txt"
+        format = z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 11710             delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 18.6064
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 26 iterations the fit converged.
+final sum of squares of residuals : 1.70213
+rel. change during last iteration : -4.58289e-08
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.493114
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.243162
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 2532.45          +/- 320.7        (12.66%)
+b               = 30.8436          +/- 0.482        (1.563%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b               0.982  1.000 

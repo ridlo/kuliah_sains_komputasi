@@ -1,0 +1,10 @@
+reset
+set term gif animate delay 50 size 500,400
+set output "thermal-animat.gif"
+i=0
+n=11
+set xlabel "x"
+set ylabel "temperature - u(x,t)"
+set xrange [0:pi]
+set yrange [-0.1:1.1]
+load "thermal-animate"

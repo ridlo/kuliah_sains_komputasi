@@ -1,0 +1,615 @@
+/*really basic layout for EinsteinYear to work in NN4 as well as more CSS2 browsers*/
+/*just two columns, content to appear in source first, floated right*/
+#portal-columns {
+	width: 100% !important;
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+}
+#portal-column-one {
+	vertical-align: top;
+	padding: 0px;
+	margin: 0px 0px 0px 0px;
+	width: 20%;
+}
+#portal-column-content {
+	vertical-align: top;
+	float: right;
+	width: 76%;
+	padding: 0px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 10px 0px 0px;
+}
+html, body {
+	margin: 0px 0px 0px 0px;
+	padding: 0;
+	background-color: #FFF;
+}
+body {
+	font: 69% Verdana, Arial, Helvetica, sans-serif;
+	color: Black;
+}
+.portlet {
+	border-style: none;
+	border-collapse: collapse;
+	padding: 6px 0px 0px 0px;
+	margin: 10px 0px 0px 0px;
+	border: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+}
+.portletBody {
+	padding: 6px 4px 6px 8px;
+	border: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-size: 100%;
+}
+#back1 {
+	background-color: #DEE7E7;
+}
+#back1 .portletBody {
+	padding: 0px;
+	
+}
+#back2 {
+	background-color: #7AC6B8; 
+	color: #FFFFFF;
+	
+}
+#back3 {
+	background-color: #194C9F; 
+}
+#back4 {
+	background-color: #8C9ECB;
+}
+.portlet a {
+	color: #FFFFFF;
+}
+.portlet h4 {
+	font-weight: normal;
+	white-space: nowrap;
+}
+.portlet h5 { 
+	padding: 0px 4px 0px 8px;
+	text-transform: lowercase;
+	display: inline;
+	font-weight: bold;
+	white-space: nowrap;
+	color: #FFFFFF;
+	font-size: 120%;
+}
+.portlet h6 { 
+	background: #dee7ec;
+	border: 1px solid #8cacbb;
+	border-style: solid solid none solid;
+	padding: 0em 1em 0em 1em;
+	text-transform: lowercase;
+	display: block;
+	font-size: 1em;
+	height: 1.2em;
+	font-weight: normal;
+	white-space: nowrap;
+}
+.portletDetails {
+	text-align: right;
+}
+.portletMore {
+	display: block;
+	text-align: right;
+	padding: 6px 0px 0px 0px;
+}
+.portletContent {
+	padding: 1em;
+}
+.portletClose {
+	float: right;
+	text-transform: none;
+	border-left: 1px solid #8cacbb;
+	padding: 0em 0.2em;
+}
+.portlet h1, 
+.portlet h2, 
+.portlet h3, 
+.portlet h4 {
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+	background-color: transparent;
+	color: #194C9F;
+}
+a img {
+	border-width: 0px 0px 0px 0px;
+}
+.notCurrentNavItem {
+	text-transform:lowercase;
+	color: #000000;
+	
+}
+.currentNavItem {
+	text-transform:lowercase;
+	color: #000000;
+}
+#portal-siteactions {
+	display: none;
+}
+#portal-column-content .content_header {
+	padding: 5px 8px 5px 8px;
+	margin: 0;
+	text-transform: lowercase;
+	display: block;
+}
+.addFavorite {
+	vertical-align: bottom;
+}
+#portal-column-content .crumbs {
+	font: 90% Verdana, Arial, Helvetica, sans-serif;
+	text-align: right;
+	font-color: #000000;
+}
+#portal-column-content .here {
+	font: 90% Verdana, Arial, Helvetica, sans-serif;
+	text-align: left;
+	font-weight: bold;
+	float: left;
+}
+#content_left_images {
+	float: left;
+	width: 225px;
+}
+.documentEditable {
+	padding: 0em 2em 1em 2em !important;
+}
+.configlet .documentEditable {
+	padding: 0em !important;
+}
+.documentEditable .documentContent {
+	border: 1px solid #74ae0b;
+	padding: 0;
+}
+.documentActions {
+	float: right;
+	margin: -1.5em 0 0 0;
+}
+.hiddenStructure {
+	display: block;
+	background: transparent;
+	background-image: none; /* safari bug */
+	border: none;
+	height: 1px;
+	overflow: hidden;
+	padding: 0;
+	margin: -1px 0 0 -1px;
+	width: 1px;
+}
+.contentViews .hiddenStructure,
+.contentActions .hiddenStructure {
+	position: absolute;
+	top: -200px;
+	left: -200px;
+}
+.contentViews {
+	background-color: transparent;
+	border-collapse: collapse;
+	padding-left: 1em;
+	line-height: normal;
+	margin-top: 1em;
+	margin-left: 0;
+	/* white-space: nowrap; */
+	list-style: none;
+	border: 1px solid #74ae0b;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+}
+.contentViews li {
+	display: inline;
+}
+.contentViews li a {
+	background-color: transparent;
+	border: 1px solid #74ae0b;
+	border-style: solid;
+	color: #578308;
+	height: auto;
+	margin-right: 0.5em;
+	padding: 0em 2em;
+	line-height: normal;
+	text-decoration: none;
+	text-transform: lowercase;
+	z-index: 1;
+}
+.contentViews .selected a {
+	background-color: #cde2a7;
+	border-bottom: #cde2a7 1px solid;
+	color: #578308;
+}
+.contentViews li a:hover {
+	background-color: #cde2a7;
+	color: #578308;
+}
+/*
+** begin ECMAScript Content Action Menus
+*/
+.contentActions {
+	border-collapse: collapse;
+	background-color: #cde2a7;
+	border-left: 1px solid #74ae0b;
+	border-right: 1px solid #74ae0b;
+	color: #578308;
+	text-align: right;
+	text-transform: lowercase;
+	padding: 0 1em;
+	z-index: 2;
+	height: 1.2em;
+}
+.contentActions a {
+	text-decoration: none;
+	color: #578308;
+	padding: 0 1em 0 0;
+}
+.contentActions ul,
+.contentActions li {
+	margin: 0;
+	list-style: none;
+	list-style-image: none;
+	display: inline;
+	color: Black;
+	text-align: left;
+}
+.contentActions ul {
+	line-height: 1.2em;
+	height: 1.2em;
+	padding: 0;
+	margin: 0;
+}
+.contentActions li {
+	float: right;
+	
+	background-repeat: no-repeat;
+	background-position: center right;
+	z-index: 4;
+	border-left: 1px solid #74ae0b;
+	padding: 0 0 0 1em;
+}
+.contentActions .actionMenu {
+	visibility: hidden;
+	z-index: 5;
+	position: absolute;
+	top: 0;
+	right: -1px;
+	background: #cde2a7;
+	overflow: hidden;
+	height: auto;
+	padding: 0;
+	margin: 1.2em 0 0 0;
+	border: 1px #74ae0b;
+	border-style: none solid solid solid;
+}
+.documentContent {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 110%;
+	padding: 0em 1em 2em 1em !important;
+	background: White;
+}
+.documentActions {
+	float: right;
+	margin: -1.5em 0 0 0;
+	display: block;
+}
+.documentActions ul,
+.documentActions li {
+	display: inline;
+	list-style: none;
+	list-style-image: none;
+}
+.documentActions a {
+	border: 0;
+	text-decoration: none;
+}
+.menuPosition {
+	/*  The spec says we can't put this on an element with a float (although 
+	Opera is the only one that cares) and we need it in order to catch 
+	the position:absolute bubbling up */
+	position: relative;
+}
+.actionMenu li {
+	float: none;
+	background: none;
+	display: inline;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+.actionMenu li a {
+	display: block;
+	white-space: nowrap;
+	padding: 0 0.5em;
+	margin: 0.2em 0;
+}
+.actionMenu li a:hover {
+	background-color: #74ae0b;
+	color: White;
+}
+.actionMenu .actionSeperator a {
+	margin-top: 0.2em;
+	padding-top: 0.2em;
+	border-top: 1px solid #74ae0b;
+}
+.actionSingular {
+	background-image: none !important;
+}
+.actionItems li {
+	background-image: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: Black;
+	background-color: transparent;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	font-weight: normal;
+	margin: 0;
+	padding-top: 0.5em;
+	border-bottom: 1px solid #8cacbb;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: Black ! important; 
+}
+h1 {
+	font-size: 160%;
+}
+h2 {
+	font-size: 150%;
+}
+h3 {
+	font-size: 140%;
+	border-bottom: none;
+	font-weight: bold;
+}
+h4 {
+	font-size: 120%;
+	border-bottom: none;
+	font-weight: bold;
+}
+h5 {
+	font-size: 100%;
+	border-bottom: none;
+	font-weight: bold;
+}
+h6 {
+	font-size: 85%;
+	border-bottom: none;
+	font-weight: bold;
+}
+ul { 
+	line-height: 1.5em;
+	list-style-type: square;
+	margin: 0.5em 0 0 1.5em;
+	padding: 0;
+
+}
+ol {
+	line-height: 1.5em;
+	margin: 0.5em 0 0 1.5em;
+	padding: 0;
+}
+ul a, ol a {
+	text-decoration: underline;
+}
+li {
+	margin-bottom: 1em;
+}
+dt {
+	font-weight: bold;	
+}
+dt a {
+	text-decoration: underline;
+}
+dd {
+	line-height: 1.5em;
+	margin-bottom: 1em;
+}
+dd a {
+	text-decoration: underline;
+}
+dd p {
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+dd.link a {
+	text-decoration: none;
+	color: Black;
+}
+fieldset {
+	border: 1px solid #8cacbb;
+	margin: 1em 0em 1em 0em;
+	padding: 0em 1em 1em 1em;
+	line-height: 1.5em;
+	width: auto;
+}
+legend {
+	background: White;
+	padding: 0.5em;
+	font-size: 90%;
+}
+form {
+	border: none;
+	margin: 0;
+}
+textarea {
+	font: 110% "Courier New", Courier, monospaced; 
+	border: 1px solid #8cacbb;  
+	color: Black;
+	background-color: white;
+	width: 100%;
+	padding: 0em;
+}
+input {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	visibility: visible;
+	border: 1px solid #8cacbb;  
+	color: Black;
+	background-color: white;
+	vertical-align: middle;
+	padding: 0em;
+}
+select {
+	border: 1px solid #8cacbb;  
+	color: Black;
+	vertical-align: top;
+}
+abbr, acronym, .explain {
+	border-bottom: 1px dotted Black;
+	color: Black;
+	background-color: transparent;
+	cursor: help;
+}
+q {
+	font-family: Times, "Times New Roman", serif;
+	font-style: italic;
+	font-size: 120%;
+}
+blockquote {
+	font-family: Times, "Times New Roman", serif;
+	font-style: italic;
+	font-size: 120%;
+}
+code {
+	font-size: 120%;
+	color: Black;
+	background-color: #dee7ec;
+}
+pre {
+	font-size: 120%;
+	padding: 1em;
+	border: 1px dashed #8cacbb;
+	color: Black;
+	background-color: #dee7ec;
+	overflow: auto;
+}
+.pre a {
+	text-decoration: underline;
+}
+.documentDescription {
+	/* The summary text describing the document */
+	font-weight: bold;
+	display: block;
+	margin: 1em 0em;
+	line-height: 1.5em;
+}
+.documentByLine {
+	text-align: right;
+	font-size: 85%;
+	clear: both;
+	font-weight: normal;
+	color: #76797c;
+}
+.documentByLine a {
+	text-decoration: underline;
+}
+.right {
+	float: right;
+}	
+#portal-footer {
+	background-color:#9999CC;
+	border: none;
+	float: none;
+	margin: 2em 0em 1em 0em;
+	padding: 0.5em 0em 1em 0em;
+	text-align: center;
+	font: 90% Verdana, Arial, Helvetica, sans-serif;
+}
+#portal-footer small {
+	font-size: 95%;
+}
+img {
+	border: none;
+	vertical-align: middle;
+}
+.listing,
+.stx table {
+    /* The default table for document listings. Contains name, document types, modification times etc in a file-browser-like fashion */
+    border-collapse: collapse;
+    border-left: 1px solid #8cacbb;
+    border-bottom: 1px solid #8cacbb;
+    font-size: 85%;
+    margin: 1em 0em 1em 0em;
+}
+.listing th,
+.stx table th {
+    background: #dee7ec;
+    border-top: 1px solid #8cacbb;
+    border-bottom: 1px solid #8cacbb;
+    border-right: 1px solid #8cacbb;
+    font-weight: normal;
+    padding: 0em 1em 0em 1em;
+    text-transform: lowercase;
+}
+.listing .top {
+    border-left: 1px solid White;
+    border-top: 1px solid White ! important;
+    border-right: 1px solid White ! important;
+    text-align: right ! important;
+    padding: 0em 0em 1em 0em;
+}
+.listing .odd {
+    /*every second line should be shaded */
+    background-color: transparent;
+}
+.listing .even {
+    background-color: #f7f9fa;
+}
+.listing .listingCheckbox {
+    text-align: center;
+}
+.listing td,
+.stx table td {
+    border-right: 1px solid #8cacbb;
+    padding: 0em 1em;
+    text-align: left;
+}
+.listing a:hover {
+    text-decoration: underline;
+}
+.listing img {
+    vertical-align: middle;
+}
+.state-private {
+    color: Black;
+}
+.state-published {
+    color: #74AE0B;
+}
+.state-pending {
+    color: #ffa500;
+}
+.state-expired {
+    color: Red;
+}
+.syndicated {
+    color: #008000;
+}
+.even {
+    background-color: #f7f9fa;
+}
+.odd {
+    background-color: transparent;
+}
+.noborder,
+.documentEditable * .noborder {
+    border: none;
+    margin: 0;
+    background-color: transparent;
+}
+hr {
+height: 1px;
+color: #8cacbb;
+background-color: transparent;
+}
+
+

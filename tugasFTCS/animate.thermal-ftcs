@@ -1,0 +1,3 @@
+plot "ftcs-out.txt" using 1:2 index i smooth csplines title sprintf("t = %f", (i*0.5/1000))
+i=i+10
+if (i < n) reread

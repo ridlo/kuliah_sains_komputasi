@@ -1,0 +1,4 @@
+set title "Ketinggian air rata-rata Jakarta"
+set xlabel "waktu (t) - hari"
+set ylabel "tinggi (h) - cm"
+plot "outbanjir"

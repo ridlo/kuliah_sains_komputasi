@@ -1,0 +1,57 @@
+\documentclass[border=1mm]{report}
+\usepackage{tikz}
+\usetikzlibrary{shapes, arrows}
+
+\begin{document}
+\tikzset{
+DFsource/.style={
+    rectangle, 
+    text width=4em, 
+    node distance=3cm, 
+    text centered, 
+    minimum height=5em,
+    append after command={% We simply travel along node rectangle and small leftupper part
+        ([xshift=0.3cm] \tikzlastnode.north west)-|([yshift=-0.3cm]\tikzlastnode.north west)%
+        ([yshift=-0.3cm]\tikzlastnode.north west)|-(\tikzlastnode.south east)|-%
+        ([xshift=0.3cm]\tikzlastnode.north west)--cycle%
+        }
+    },
+    DFprocess/.style = {
+        rectangle, 
+        draw, 
+        text width=6em, 
+        node distance=3cm, 
+        text centered, 
+        rounded corners=10, 
+        minimum height=8em
+    },
+    DFstore/.style = {
+        rectangle, 
+        rectangle split,
+        rectangle split parts=2,
+        rectangle split horizontal, 
+        rectangle split draw splits,
+        node distance=3cm, 
+        minimum height = 2em,
+        append after command={(\tikzlastnode.north east)-|(\tikzlastnode.west)|-(\tikzlastnode.south east)},
+%       append after command={(\tikzlastnode.south)-|(\tikzlastnode.text split)|-(\tikzlastnode.north)}
+        append after command={(\tikzlastnode.one split north)--(\tikzlastnode.one split south)}
+    }
+}
+
+
+\tikzstyle{line} = [draw, -latex']
+
+% level 0
+\begin{tikzpicture}[node distance = 2cm, auto]
+% Place Nodes
+\draw node [DFsource] (pendaftar) {Pendaftar SIM};
+\draw node [DFprocess, right of=pendaftar] (reg) {1.0 \\ Registrasi Online};
+\draw node [DFstore, above of=reg] (store1) {1 \nodepart{two} Pendaftar Online};
+% Connections
+\path [line] (pendaftar) -- (reg);
+\path [line] (reg) -- (store1) ;
+\end{tikzpicture}
+
+
+\end{document}

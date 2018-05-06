@@ -1,0 +1,683 @@
+
+/*.fb_bar_bfrlog {height:27px;background:#f1f2f2;padding:10px 15px;margin-bottom:10px;font:normal 18px Arial, Helvetica, sans-serif;color:#ff6600;text-align:left;width:946px;}
+*/
+
+.fb_bar_bfrlog_b {background:url(http://assets.kompas.com/js/fb_opengraph/images/bg_fbtimeline01.jpg);background-repeat:no-repeat;width:820px;height:26px;margin-bottom:15px;padding:4px 7px 6px 9px;overflow:hidden; margin:auto; }
+.fbtimeline_t001 {font:bold 11px Georgia, "Times New Roman", Times, serif;color:#ffcc00;font-style:italic;text-decoration:none;}
+.fbtimeline_t001 a{font:bold 11px Georgia, "Times New Roman", Times, serif;color:#ffcc00;font-style:italic;text-decoration:none;}
+.fbtimeline_t001 a:hover{text-decoration:underline;}
+.fbtimeline_t002 {font:bold 19px Arial, Helvetica, sans-serif;color:#ffffff;text-decoration:none;}
+
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+
+#bar-fb{
+	background: none repeat scroll 0 0 #F2F2F2;
+	float: left;
+	font-family: arial;
+	height: 60px;
+	padding: 3px;
+	width: 661px;
+	
+}
+#bar-fb #left-bar {
+	border-right: 1px solid #E3E3E3;
+	float: left;
+	height: 58px;
+	width: 444px;
+}
+
+#bar-fb #left-bar #temans ul{
+	display: none;
+	list-style: none outside none;
+	width:500px;
+	margin-top: 23px;
+	margin-left:0px !important;
+	padding:0 !important;
+	
+}
+#bar-fb #left-bar #temans ul li span.recent{
+	background: none repeat scroll 0 0 red;
+	border-radius: 26px 26px 26px 26px;
+	color: #FFFFFF;
+	float: right;
+	font-size: 11px;
+	height: 15px;
+	margin-left: 14px;
+	margin-top: -13px;
+	padding: 2px 4px;
+	position: absolute;
+	text-align: center;
+	width: 10px;
+}
+#list_ctrl li.list_btn_ctrl  {
+	font-size:10px !important;
+}
+#bar-fb #left-bar #temans ul li .newLoadbox {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #FF6400;
+	display: none;
+	height: auto;
+	margin-left: -98px;
+	margin-top: -5px;
+	padding: 6px 3px 29px;
+	position: absolute;
+	width: 400px;
+	z-index: 1;
+	
+}
+.show {
+	display:block !important;
+}
+#bar-fb #left-bar #temans ul li.teman {
+	display: inline-block;
+	height: 30px;
+	margin-right: 4px;
+	overflow: hidden;
+	vertical-align: top;
+	width: 30px;
+}
+#bar-fb #left-bar #temans ul li.teman:hover {
+	overflow:visible;
+	height:60px;
+	background: none repeat scroll 0 0 #fff;
+	border:1px solid #FF6400;
+	border-bottom:none;	
+	z-index: 20 !important;
+	padding:8px;
+	position:relative;
+	margin: -5px -10px;
+}
+/*#bar-fb #left-bar #temans ul li img:hover{
+	
+	position:relative;
+	padding:2px;
+	padding-bottom:10px;
+	background:#fff;
+	margin-bottom:-10px;
+	z-index: 11 !important;
+}*/
+#bar-fb #left-bar #temans ul li .popup-fb {
+	background: url("http://assets.kompas.com/js/fb_opengraph/images/bg-news.png") no-repeat scroll 0 0 #fff;
+	padding-bottom:20px;
+	border:1px solid #FF6400;
+	border-top:none;
+	float: left;
+	margin-left: -57px;
+	margin-top: 4px;
+	/*min-height: 250px;*/
+	height:auto;
+	position: relative;
+	width: 320px;
+	z-index: 5 !important;
+}
+#bar-fb #left-bar #temans .teman  ul li span {
+	font-size:12px;
+	float:left;
+	clear:both;
+}
+#bar-fb #left-bar h3 {
+	color: #FF6400;
+	font-size: 14px;
+	margin: 2px 0 0 3px;
+	position: absolute;
+}
+#bar-fb #right-bar h3 {
+	color: #FF6400;
+	font-size: 12px;
+	margin: 2px 0 0 3px;
+	position: absolute;
+}
+#bar-fb #left-bar ul li.selected{
+	border:1px solid #FF6400;
+	margin-top:-2px;
+	position: relative !important;
+	
+}
+#bar-fb #left-bar ul li.selected img{
+	-moz-border-bottom-colors: none;
+	-moz-border-image: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	background: none repeat scroll 0 0 #FFFFFF;
+	border-color: #FF6400 #FF6400 -moz-use-text-color;
+	border-style: solid solid none;
+	border-width: 1px 1px medium;
+	padding: 2px 2px 8px;
+	position: relative;
+	z-index: 99;
+}
+#bar-fb #left-bar .paging-fb-news {
+	float: right;
+	height: 20px;
+	margin-right: 4px;
+	margin-top: -1px;
+	position: relative;
+	width: 40px;
+	z-index: 2;
+}
+#bar-fb #left-bar .popup-fb .paging-fb-news {
+	margin-top: 20px !important;
+}
+#bar-fb #left-bar .newLoadbox .paging-fb-news {
+	height: 20px;
+	left: 88%;
+	margin-top: 7px;
+	position: absolute;
+	width: 40px;
+	z-index: 2;
+}
+ul.their_news_list li:hover{
+	border:none;
+}
+.prof-box  {
+	border-bottom: 1px solid #CCCCCC;
+	clear: both;
+	height: 33px;
+	margin-left: 6px;
+	margin-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 4px;
+	width: 294px;
+}
+.prof-box  h3{
+	color:#000 !important;
+	float: left;
+	margin-left: 7px !important;
+	position: relative !important;
+}
+.prof-box img {
+	border: none !important;
+	float:left;
+	
+}
+#bar-fb #right-bar .paging-fb-news {
+	float: right;
+	height: 20px;
+	margin-top: 1px;
+	position: relative;
+	width: 40px;
+	z-index: 2;
+}
+#bar-fb #right-bar .news_most{
+	display: none;
+	margin-left: 5px;
+	margin-top: 19px;
+}
+#bar-fb #right-bar .news_most a{
+	text-decoration:none;
+	color:#000;
+	font-size:12px;
+	
+}
+#bar-fb #right-bar .news_most .time {
+	font-size:12px;
+	
+	color: #ABABAB !important;
+	font: 11px Arial,Helvetica,sans-serif;
+	padding-left: 5px;
+}
+
+#bar-fb #left-bar .paging-fb-news .next-news-fb{
+	background: url("http://assets.kompas.com/js/fb_opengraph/images/arrow.png") no-repeat scroll 100% 0 transparent;
+	float: right;
+	height: 20px;
+	width: 20px;
+	cursor:pointer;
+}
+#bar-fb #left-bar .paging-fb-news .prev-news-fb{
+	background: url("http://assets.kompas.com/js/fb_opengraph/images/arrow.png") no-repeat scroll 0 0 transparent;
+	float: left;
+	height: 20px;
+	width: 20px;
+	cursor:pointer;
+}
+#bar-fb #right-bar .paging-fb-news .next-news-fb{
+	background: url("http://assets.kompas.com/js/fb_opengraph/images/arrow.png") no-repeat scroll 100% 0 transparent;
+	float: right;
+	height: 20px;
+	width: 20px;
+	cursor:pointer;
+}
+#bar-fb #right-bar .paging-fb-news .prev-news-fb{
+	background: url("http://assets.kompas.com/js/fb_opengraph/images/arrow.png") no-repeat scroll 0 0 transparent;
+	float: left;
+	height: 20px;
+	width: 20px;
+	cursor:pointer;
+}
+#bar-fb #right-bar {
+	border-left: 1px solid #FFFFFF;
+	float: left;
+	height: 75px;
+	margin: 0;
+	width: 214px;
+}
+#bar-fb .text{
+	font-family: arial;
+	padding: 21px 22px 5px;
+}
+#bar-fb .text p {
+	font-size: 10pt;
+	margin: 0;
+	width: 651px;
+}
+#bar-fb .text h2{
+	margin:0;
+	font-size:14pt;
+}
+#ui_account  span.pre-txt{
+	clear: both;
+	float: left;
+	margin: 0 0 1px;
+	margin-left:4px;
+	font-size:10px;
+}
+#ui_account .account-detail {
+	float: left;
+	height: 65px;
+	margin-top: 2px;
+	text-align: left;
+	width: 225px;
+}
+#ui_account h3 {
+	font-size: 14px !important;
+	margin: 2px 0 0 7px;
+	color: #FF6400;
+}
+#ui_account{
+	background: none repeat scroll 0 0 #F2F2F2;
+	float: right;
+	font-family: arial;
+	height: 60px;
+	margin-right: -7px;
+	padding: 3px;
+	width: 293px;
+}
+#ui_account .img-box{
+	
+	float: left;
+
+	margin-left: 6px;
+	margin-right: 2px;
+	margin-top: 4px;
+}
+#ui_account .img-box img {
+
+}
+#ui_account span{
+	float: left;
+	font-size: 13px;
+	margin-bottom: -27px;
+	margin-left: 109px;
+	margin-top: 28px;
+}
+
+#ui_account img {
+	float:left;
+	
+
+}
+#ui_account h3 {
+	font-size:14px !important;
+}
+#ui_account a {
+	text-decoration:none;
+	padding: 5px 8px;
+	margin-top:5px;
+	background:#000;
+	color:#fff;
+	float:left;
+}
+.btn_fb{
+	cursor: pointer;
+	margin-left: 62px;
+	margin-top: 30px;
+}
+#ui_account  .f_stats{
+	float:left;
+	font-size:11px !important;
+}
+#ui_account  ul {
+	
+	display: block;
+	float: left;
+	height: 15px;
+	margin: 0 0 0 0px;
+	padding: 0;
+	text-align: left;
+	width: 415px;
+	
+}
+#ui_account  ul#list_ctrl li {
+	height:9px;
+	font-size:11px;
+}
+#ui_account  ul li {
+	color: #5F87AE;
+	cursor: pointer;
+	float: left;
+	font-size: 13px;
+	list-style: none outside none;
+	margin: 0 1px;
+	padding: 2px 3px;
+	line-height:7px;
+	border-right:1px solid #5F87AE;
+}
+#ui_account  ul li img {
+	float: right;
+	margin-left: 4px;
+}
+#ui_account  ul li.selected {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border-color: #CECECE #CECECE -moz-use-text-color !important;
+	border-style: solid solid none !important;
+	border-width: 2px 2px medium !important;
+	height: 8px !important;
+	position: relative;
+	z-index: 10;
+	padding:7px;
+}
+
+#ui_account #load_fb_stuff  ul li{
+	background: none repeat scroll 0 0 #EEEEEE;
+	border: medium none;
+	font-size: 12px;
+	height: auto;
+	margin-bottom: 1px;
+	padding: 7px;
+	width: 258px !important;
+	
+}
+#ui_account #load_fb_stuff  ul li .txt{
+	float: left;
+	font-size: 12px;
+	line-height: 18px;
+	width: 240px;
+	margin-right:15px;
+}
+#ui_account #load_fb_stuff ul li .txt a{
+	background: none repeat scroll 0 0 transparent !important;
+	color: #000000;
+}
+#ui_account #load_fb_stuff ul li .time{
+	color: #5F87AE !important;
+	font-size: 11px;
+	margin-left: 1px !important;
+	
+}
+#ui_account #load_fb_stuff {
+	display:none;
+	
+}
+.popup-fb .prof-box h3 {
+	font-size:12px !important;
+	margin-top:	 0px !important;
+	font-weight:normal;
+}
+#ui_account .show  {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 2px solid #CECECE;
+	display: block !important;
+	float: left;
+	height: auto;
+	margin-top: 50px;
+	position: absolute;
+	width: 294px;
+	z-index: 1;
+	
+}
+#bar-fb #left-bar #temans ul li  ul.their_news_list {
+	display: none;
+	font-size: 12pt;
+	height: auto;
+	margin-top: 7px;
+	width: 294px !important;
+}
+#bar-fb #left-bar #temans ul li  ul.their_news_list li{
+	border-bottom: 1px dotted;
+	clear: both !important;
+	float: left;
+	height: auto;
+	margin-left: 8px;
+	padding-bottom: 7px;
+	padding-top: 4px;
+	position: relative;
+	width: 294px;
+}
+#bar-fb #left-bar #temans ul li  ul.their_news_list li span {
+	color: #000000;
+	cursor: pointer;
+	margin: 0;
+}
+#load_fb_stuff  .news_list  {
+	height:auto;
+	display:none;
+}
+#load_fb_stuff  ul.news_list {
+	margin-left: 10px !important;
+	margin-top: 24px !important;
+	
+}
+#load_fb_stuff  .news_list ul li {
+	cursor: default;
+	margin-left: -107px;
+}
+#load_fb_stuff  .news_list li span {
+	color: #000000;
+	cursor: pointer;
+	margin: 0;
+}
+#load_fb_stuff  .news_list li span.txt span {
+	float:left !important;
+}
+#bar-fb #left-bar #temans .teman ul li span a{
+	text-decoration:none;
+	color:#000;
+}
+#load_fb_stuff  .news_list li span br{
+	margin:0;
+}
+#load_fb_stuff  h3 {
+	margin: 10px 0 -10px 10px;
+}
+#load_fb_stuff  .friend_list {
+	float: left;
+	height: auto;
+	margin: 5px;
+	min-height: 50px;
+	padding: 2px;
+	width: 100%;
+	
+}
+#load_fb_stuff  .friend_list  img {
+	border: 1px solid #CECECE;
+	float: left;
+	padding: 2px;
+}
+#load_fb_stuff  .friend_list  h3 {
+	float: left;
+	margin: 0;
+	width: 200px;
+}
+#load_fb_stuff  .friend_list  a{
+	float: left;
+	font-size: 14px;
+	padding: 2px 10px;
+}
+#load_fb_stuff  .friend_list  span {
+	font-size:12px;
+}
+#load_fb_stuff  ul#options  {
+	height: auto;
+	margin: 10px 5px;
+	
+}
+#load_fb_stuff  ul#options li {
+	float:left !important;
+	width:100%;
+	background:none !important;
+}
+#btn_social {
+	float:left;
+	background:#cecece;
+	padding:5px 10px;
+	margin-top:7px;
+	cursor:pointer;
+	font-size:14px;
+}
+.del_butt{
+	background: url("http://assets.kompas.com/js/fb_opengraph/images/del_grey.png") no-repeat scroll 0 0 transparent;
+	height: 21px;
+	position: absolute;
+	width: 19px;
+	margin-left:-16px !important;
+	
+}
+#bar-fb-content{
+	display:none;
+}
+.del_butt:hover{
+	background: url(http://assets.kompas.com/js/fb_opengraph/images/del_red.png) no-repeat; 
+}
+.normal {
+	background: none repeat scroll 0 0 transparent;
+	color: #5F87AE;
+	cursor: pointer;
+	font-size: 10px;
+	padding-left: 5px;
+}
+.time {
+	color: #5F87AE !important;
+	font-size:10px !important;
+}
+#box_slide {
+	height: auto;
+	overflow: hidden;
+	float:left;
+}
+
+.tampil {
+	display:block !important;
+}
+#pp {
+	float: right !important;
+	margin-bottom: 0 !important;
+}
+#pp a {
+	background-color: #5F87AE;
+}
+/* gusti pop box */
+#personalize-popbox{
+		background:#fff;
+		margin:50px auto 0 auto;
+		-moz-box-shadow:    3px 3px 5px 6px #ccc;
+		  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+		  box-shadow:         3px 3px 5px 6px #ccc;
+		padding:10px;
+	}
+	#logo_kompasfbtimeline{
+		background:url('http://ads2.kompas.com/layer/elexgame/assets/images/logotop.png') no-repeat;
+		width:178px;
+		height:59px;
+		display:block;
+		float:left;
+		
+	}
+	#profile_fb_pop{
+		float:right;
+		width:230px;
+		height:59px;
+		display:block;
+		
+	}
+	#image_profile_pop{
+		width:40px;
+		height:40px;
+		background:#000;
+		float:left;
+		display:block;
+	}
+	#image_profile_pop img {
+		width:40px;
+		height:40px;
+	}
+	.text_big_fb{
+		font-size:16pt;
+		color:#000;
+		font-weight:bold;
+		font-family:arial;
+		margin-left:10px;
+		float:left;
+	}
+	#container-middle-fb{
+		border-top:2px solid #6A84C4;
+		border-bottom:2px solid #6A84C4;
+		clear:both;
+		display:block;
+		float:left;
+		padding-bottom:20px;
+	}
+	#top-container-text_fb{
+		font-size:16pt;
+		color:#333333;
+		font-weight:bold;
+		font-family:arial;
+		margin-left:10px;
+		float:left;
+		clear:both;
+		margin-top:10px;
+	}
+	#top-container-tengah_fb{
+		font-size:12pt;
+		color:#333333;
+		font-family:arial;
+		margin-left:10px;
+		float:left;
+		clear:both;
+		margin-top:10px;
+		width:200px;
+		
+	}
+	
+	#container-middle-fb img {
+		
+		float: right;
+		margin-right: 31px;
+		margin-top: -86px;
+		position: relative;
+		-moz-box-shadow:    0 1px 5px 2px #CCCCCC;
+		  -webkit-box-shadow: 0 1px 5px 2px #CCCCCC;
+		  box-shadow:        0 1px 5px 2px #CCCCCC;
+		  
+		
+	}
+	#container-middle-fb a {
+		float: left;
+		text-decoration:none;
+		font-family:arial;
+		color:#6A84C4;
+		font-size:10pt;
+		margin-top: 25px;
+		margin-left:10px;
+		
+		
+	}
+	#btn-start-share-fb{
+		background: none repeat scroll 0 0 #6A84C4;
+		clear: both;
+		color: #FFFFFF;
+		float: left;
+		font-family: arial;
+		font-size: 12px;
+		font-weight: bold;
+		margin-left: 11px;
+		margin-top: 25px;
+		padding: 5px 10px;
+		cursor:pointer;
+	}

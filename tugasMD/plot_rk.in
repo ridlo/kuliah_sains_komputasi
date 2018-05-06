@@ -1,0 +1,4 @@
+# gnuplot input file
+set xlabel "t"
+set ylabel "y(t)"
+plot "rk-out.txt" using 1:2 with lines

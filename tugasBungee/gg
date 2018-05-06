@@ -1,0 +1,8 @@
+reset
+set term gif animate
+set output "animate.gif"
+n=24    #n frames
+dt=2*pi/n
+set xrange [0:4*pi]
+i=0
+load "animate.gnuplot"

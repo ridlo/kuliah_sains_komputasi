@@ -1,0 +1,4 @@
+set title "Heat Transfer"
+set xlabel "x (meter)"
+set ylabel "y (C)"
+plot "outHeat" using 1:4 with lines

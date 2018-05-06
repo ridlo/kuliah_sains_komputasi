@@ -1,0 +1,7 @@
+f(x) = a*x**b
+fit f(x) "fit-konst.txt" via a, b
+set log x
+set log y
+set xlabel "Rrad (meter)"
+set ylabel "Scaled t_mode"
+plot "fit-konst.txt" title "", f(x)

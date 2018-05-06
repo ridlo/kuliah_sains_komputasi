@@ -1,0 +1,60 @@
+Curve 1: LORENTZIAN
+#0: area: 8.600e+003 +/- 7.702e+000
+#1: center: 7.234e+001 +/- 3.816e-002
+#2: FWHM: 9.762e+001 +/- 1.214e-001
+
+Chi-squared: 1607.033
+
+
+
+Curve 1: LORENTZIAN
+#0: area: 1.370e+004 +/- 1.385e+001
+#1: center: 1.304e+002 +/- 7.877e-002
+#2: FWHM: 1.803e+002 +/- 2.510e-001
+
+Chi-squared: 2424.592
+
+
+
+Curve 1: LORENTZIAN
+#0: area: 4.013e+004 +/- 3.273e+001
+#1: center: 2.883e+002 +/- 1.390e-001
+#2: FWHM: 3.886e+002 +/- 4.414e-001
+
+Chi-squared: 2542.928
+
+
+
+Curve 1: LORENTZIAN
+#0: area: 5.923e+004 +/- 6.747e+001
+#1: center: 7.010e+002 +/- 5.032e-001
+#2: FWHM: 1.026e+003 +/- 1.607e+000
+
+Chi-squared: 2115.399
+
+
+
+Curve 1: LORENTZIAN
+#0: area: 1.654e+005 +/- 1.385e+002
+#1: center: 1.392e+003 +/- 6.001e-001
+#2: FWHM: 1.612e+003 +/- 1.893e+000
+
+Chi-squared: 2059.028
+
+
+
+Curve 1: LORENTZIAN
+#0: area: 2.669e+005 +/- 2.789e+002
+#1: center: 2.722e+003 +/- 1.727e+000
+#2: FWHM: 3.827e+003 +/- 5.504e+000
+
+Chi-squared: 2081.983
+
+
+
+Curve 1: LORENTZIAN
+#0: area: 7.754e+005 +/- 7.648e+002
+#1: center: 6.731e+003 +/- 4.085e+000
+#2: FWHM: 9.633e+003 +/- 1.299e+001
+
+Chi-squared: 1936.318

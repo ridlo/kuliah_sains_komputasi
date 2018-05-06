@@ -1,0 +1,18 @@
+Judul
+
+Konsep random walk
+- manfaat/guna
+- contoh: drunken sailor
+Permasalahan random walk foton di matahari/bintang
+Model (zona radiasi)
+- density matahari konstan
+- density matahari gradien linier
+ p-p cycle
+ cross section
+ mfp
+ probability tumbukan
+ efisien
+tujuan
+- waktu escape (sampai permukaan)
+- spektrum akhir
+

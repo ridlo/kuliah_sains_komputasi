@@ -1,0 +1,151 @@
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} 
+
+\usepackage[T1]{fontenc} 
+\usepackage[english]{babel}
+\usepackage{amsmath,amsfonts,amsthm}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{float}
+  \floatplacement{figure}{H}
+  \floatplacement{table}{H}
+\usepackage{sectsty} 
+\allsectionsfont{\centering \normalfont\scshape} 
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs 
+
+% -------- tambahan -------------
+% -------------------------------
+\usepackage[labelformat=empty]{caption} % remove caption number in figure
+\usepackage{color}
+\usepackage{listings}
+\lstset{ %
+language=bash,                % choose the language of the code
+basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+numbers=left,                   % where to put the line-numbers
+numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
+stepnumber=1,                   % the step between two line-numbers. If it is 1 each line will be numbered
+numbersep=5pt,                  % how far the line-numbers are from the code
+backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+showspaces=false,               % show spaces adding particular underscores
+showstringspaces=false,         % underline spaces within strings
+showtabs=false,                 % show tabs within strings adding particular underscores
+frame=single,           % adds a frame around the code
+tabsize=2,          % sets default tabsize to 2 spaces
+captionpos=b,           % sets the caption-position to bottom
+breaklines=true,        % sets automatic line breaking
+breakatwhitespace=false,    % sets if automatic breaks should only happen at whitespace
+escapeinside={\%*}{*)}          % if you want to add a comment within your code
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\textsc{Computational Science - ITB} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\small Algoritma dan Desain Perangkat Lunak \\ 
+\large Desain Sistem Pembuatan SIM (Surat Izin Mengemudi): \textit{Waterfall Model}\\  % The assignment title
+\horrule{1.5pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+\author{\small Febrie Ahmad A. || 20912008 \\ \small Ridlo W. Wibowo || 20912009} % Your name
+\date{\normalsize\today} % Today's date or a custom date
+
+% -------------------------------------------------------------------------------
+\begin{document}
+
+\maketitle % Print the title
+
+%\section{Requirements specification}
+%\subsection{abc}
+
+%\large \textbf{Problem.}
+%Buatlah program untuk solusi Parabolic Partial Differential Equations (PDE),\\
+%- \textit{Forward Difference Method} (FTCS)\\ 
+%- \textit{Backward Difference Method} (BTCS)\\
+%- \textit{Crank-Nicolson Method} (C-N)\\
+%Lalu tentukan solusi untuk PDE:\\
+%\begin{equation}
+%\frac{\partial u}{\partial t} = \frac{\partial ^{2}u}{\partial x^{2}}
+%\end{equation}
+%untuk $0 < x < \pi$ dan $t > 0$ dengan,
+%\begin{itemize}
+%\item syarat Batas:\\
+%$u(0, t) = u(\pi, t) = 0.0$ untuk $t > 0$\\
+%\item syarat Awal:\\
+%$u(x,0) = \sin(x)$ untuk  $0 \leq x \leq \pi$\\ 
+%\end{itemize}
+%dan bandingkan hasilnya untuk $t = 0.5$.\\
+%(solusi eksak $u(x, t) = e^{-t}\sin{x}$)
+
+%\newpage
+%\large \textbf{Result.}
+%Dari penurunan dan algoritma yang diberikan di buku \textit{Numerical Analysis} oleh Richard L.Burden dan J. Douglas Faires, lalu dapat diterapkan untuk membuat program penyelesaian masalah PDE. Program yang telah dibuat terlampir di akhir (\textit{ftcs.cpp}, \textit{btcs.cpp}, \textit{CN.cpp}).
+%
+%\begin{table}[ht]
+%\begin{tabular}{c c c c}
+%\hline
+%$x_{i}$ & $u_{(x_{i}, 0.5)}$ & $w_{(x_{i}, 0.5)}$ & $\vert u - w \vert _{(x_{i}, 0.5)}$  \\ [0.5ex]
+%\hline 
+% 1 &  2 &  3 & 4 \\
+% &  &  & \\
+% &  &  & \\
+% &  &  & \\
+% &  &  & \\
+% &  &  & \\
+% &  &  & \\
+% &  &  & \\
+% &  &  & \\
+% &  &  & \\
+% &  &  & \\ [1ex]
+%\hline 
+%\end{tabular}
+%\end{table}
+%
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=0.8\textwidth]
+%		{plot.png}
+%	\caption{Plot hasil akhir ($t = 0.5$).}
+%\end{figure}
+%
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=0.8\textwidth]
+%		{zoom.png}
+%	\caption{Diperbesar disekitar $x = \frac{\pi}{2}$ ($t = 0.5$).}
+%\end{figure}
+%
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

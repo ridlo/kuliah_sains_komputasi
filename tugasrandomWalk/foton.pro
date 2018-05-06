@@ -1,0 +1,37 @@
+pro foton
+
+Folder='/home/ridlo/Dropbox/Dokumen/PengenalanSK/tugasrandomWalk/'
+file1='hikerstat-10.txt'
+file2='hikerstat-20.txt'
+file3='hikerstat-50.txt'
+file3='hikerstat-100.txt'
+
+n1=fltarr(1000)
+t1=fltarr(1000)
+openr,1,Folder+file1
+for i=1,1000 do begin
+	readf,1,[n1[i], t1[i]], format='(F7.3,1X,F7.3)'
+endfor
+close,1
+
+
+nb1=100
+ht1=histogram(t1,nbins=nb1)
+nel1=n_elements(ht1)
+bz1 = (max(t1) - min(t1))/ 100
+bin1=bz1*findgen(nel1)+min(t1)
+openw,nulis,Folder+'10.txt',/get_lun
+ff=0.
+repeat begin
+	printf,nulis,[bin1[ff],ht1[ff],0.1],format='(F7.3,1X,F7.3,1X,F7.3)'
+	ff=ff+1.
+endrep until (ff eq 100)
+close,nulis
+free_lun,nulis
+
+
+window,0
+plot,alog10(bin1),ht1,psym=10, background='ffffff'x, color='000000'x, xrange=[0.,4.], yrange=[0.,60.],$
+	xtitle="log(tm)", ytitle="# of occurances", title="distribution for different R_rad in 1000 running"
+
+end

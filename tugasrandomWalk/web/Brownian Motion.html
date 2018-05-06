@@ -1,0 +1,1356 @@
+
+<!-- saved from url=(0077)http://galileo.phys.virginia.edu/classes/152.mf1i.spring02/BrownianMotion.htm -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:st1="urn:schemas-microsoft-com:office:smarttags" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 11">
+<meta name="Originator" content="Microsoft Word 11">
+<link rel="File-List" href="http://galileo.phys.virginia.edu/classes/152.mf1i.spring02/BrownianMotion_files/filelist.xml">
+<link rel="Edit-Time-Data" href="http://galileo.phys.virginia.edu/classes/152.mf1i.spring02/BrownianMotion_files/editdata.mso">
+<link rel="OLE-Object-Data" href="http://galileo.phys.virginia.edu/classes/152.mf1i.spring02/BrownianMotion_files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Brownian Motion</title>
+<script>window["_GOOG_TRANS_EXT_VER"] = "1";</script></head><body lang="EN-US" link="blue" vlink="purple" style="tab-interval:.5in"><o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="State">
+<o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="City">
+<o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="place">
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>mf1i</o:Author>
+  <o:LastAuthor>Michael Fowler </o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>3</o:TotalTime>
+  <o:LastPrinted>2008-07-31T20:16:00Z</o:LastPrinted>
+  <o:Created>2008-08-01T15:37:00Z</o:Created>
+  <o:LastSaved>2008-08-01T15:38:00Z</o:LastSaved>
+  <o:Pages>4</o:Pages>
+  <o:Words>2132</o:Words>
+  <o:Characters>12153</o:Characters>
+  <o:Company>Physics Department</o:Company>
+  <o:Lines>101</o:Lines>
+  <o:Paragraphs>28</o:Paragraphs>
+  <o:CharactersWithSpaces>14257</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+ <o:CustomDocumentProperties>
+  <o:MTWinEqns dt:dt="boolean">1</o:MTWinEqns>
+ </o:CustomDocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:PunctuationKerning/>
+  <w:DrawingGridHorizontalSpacing>6 pt</w:DrawingGridHorizontalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>2</w:DisplayHorizontalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Calibri;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1073750139 0 0 159 0;}
+@font-face
+	{font-family:Cambria;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1073741899 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:Calibri;}
+h1
+	{mso-style-link:" Char Char12";
+	mso-style-next:Normal;
+	margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:14.0pt;
+	font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	color:#365F91;
+	mso-font-kerning:0pt;}
+h2
+	{mso-style-link:" Char Char11";
+	mso-style-next:Normal;
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:13.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:red;}
+h3
+	{mso-style-noshow:yes;
+	mso-style-link:" Char Char10";
+	mso-style-next:Normal;
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:11.0pt;
+	font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	color:#4F81BD;}
+h4
+	{mso-style-noshow:yes;
+	mso-style-link:" Char Char9";
+	mso-style-next:Normal;
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:11.0pt;
+	font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	color:#4F81BD;
+	font-style:italic;}
+h5
+	{mso-style-noshow:yes;
+	mso-style-link:" Char Char8";
+	mso-style-next:Normal;
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:11.0pt;
+	font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	color:#243F60;
+	font-weight:normal;}
+h6
+	{mso-style-noshow:yes;
+	mso-style-link:" Char Char7";
+	mso-style-next:Normal;
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	font-size:11.0pt;
+	font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	color:#243F60;
+	font-weight:normal;
+	font-style:italic;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-noshow:yes;
+	mso-style-link:" Char Char6";
+	mso-style-next:Normal;
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:7;
+	font-size:11.0pt;
+	font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:#404040;
+	font-style:italic;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-noshow:yes;
+	mso-style-link:" Char Char5";
+	mso-style-next:Normal;
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:8;
+	font-size:10.0pt;
+	font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:#404040;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-noshow:yes;
+	mso-style-link:" Char Char4";
+	mso-style-next:Normal;
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:9;
+	font-size:10.0pt;
+	font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:#404040;
+	font-style:italic;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:" Char Char1";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.25in right 6.5in;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:Calibri;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-noshow:yes;
+	mso-style-link:" Char Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.25in right 6.5in;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:Calibri;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:" Char Char3";
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:15.0pt;
+	margin-left:0in;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-bottom-alt:solid #4F81BD 1.0pt;
+	padding:0in;
+	mso-padding-alt:0in 0in 4.0pt 0in;
+	font-size:26.0pt;
+	font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:#17365D;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:" Char Char3";
+	mso-style-next:Normal;
+	mso-style-type:export-only;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-bottom-alt:solid #4F81BD 1.0pt;
+	padding:0in;
+	mso-padding-alt:0in 0in 4.0pt 0in;
+	font-size:26.0pt;
+	font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:#17365D;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:" Char Char3";
+	mso-style-next:Normal;
+	mso-style-type:export-only;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-bottom-alt:solid #4F81BD 1.0pt;
+	padding:0in;
+	mso-padding-alt:0in 0in 4.0pt 0in;
+	font-size:26.0pt;
+	font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:#17365D;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:" Char Char3";
+	mso-style-next:Normal;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:15.0pt;
+	margin-left:0in;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-bottom-alt:solid #4F81BD 1.0pt;
+	padding:0in;
+	mso-padding-alt:0in 0in 4.0pt 0in;
+	font-size:26.0pt;
+	font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:#17365D;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-link:" Char Char2";
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:#4F81BD;
+	letter-spacing:.75pt;
+	font-style:italic;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MTDisplayEquation, li.MTDisplayEquation, div.MTDisplayEquation
+	{mso-style-name:MTDisplayEquation;
+	mso-style-link:"MTDisplayEquation Char";
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.25in right 6.5in;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:Calibri;}
+span.MTDisplayEquationChar
+	{mso-style-name:"MTDisplayEquation Char";
+	mso-style-locked:yes;
+	mso-style-link:MTDisplayEquation;
+	mso-ansi-font-size:11.0pt;
+	mso-bidi-font-size:11.0pt;}
+span.CharChar12
+	{mso-style-name:" Char Char12";
+	mso-style-locked:yes;
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:Cambria;
+	mso-bidi-font-family:"Times New Roman";
+	color:#365F91;
+	font-weight:bold;}
+span.CharChar11
+	{mso-style-name:" Char Char11";
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	color:red;
+	font-weight:bold;}
+span.CharChar10
+	{mso-style-name:" Char Char10";
+	mso-style-noshow:yes;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:Cambria;
+	mso-bidi-font-family:"Times New Roman";
+	color:#4F81BD;
+	font-weight:bold;}
+span.CharChar9
+	{mso-style-name:" Char Char9";
+	mso-style-noshow:yes;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 4";
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:Cambria;
+	mso-bidi-font-family:"Times New Roman";
+	color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.CharChar8
+	{mso-style-name:" Char Char8";
+	mso-style-noshow:yes;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 5";
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:Cambria;
+	mso-bidi-font-family:"Times New Roman";
+	color:#243F60;}
+span.CharChar7
+	{mso-style-name:" Char Char7";
+	mso-style-noshow:yes;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 6";
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:Cambria;
+	mso-bidi-font-family:"Times New Roman";
+	color:#243F60;
+	font-style:italic;}
+span.CharChar6
+	{mso-style-name:" Char Char6";
+	mso-style-noshow:yes;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 7";
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:Cambria;
+	mso-bidi-font-family:"Times New Roman";
+	color:#404040;
+	font-style:italic;}
+span.CharChar5
+	{mso-style-name:" Char Char5";
+	mso-style-noshow:yes;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 8";
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:Cambria;
+	mso-bidi-font-family:"Times New Roman";
+	color:#404040;}
+span.CharChar4
+	{mso-style-name:" Char Char4";
+	mso-style-noshow:yes;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 9";
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:Cambria;
+	mso-bidi-font-family:"Times New Roman";
+	color:#404040;
+	font-style:italic;}
+span.CharChar3
+	{mso-style-name:" Char Char3";
+	mso-style-locked:yes;
+	mso-style-link:Title;
+	mso-ansi-font-size:26.0pt;
+	mso-bidi-font-size:26.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:Cambria;
+	mso-bidi-font-family:"Times New Roman";
+	color:#17365D;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;}
+span.CharChar2
+	{mso-style-name:" Char Char2";
+	mso-style-locked:yes;
+	mso-style-link:Subtitle;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:Cambria;
+	mso-bidi-font-family:"Times New Roman";
+	color:#4F81BD;
+	letter-spacing:.75pt;
+	font-style:italic;}
+p.NoSpacing, li.NoSpacing, div.NoSpacing
+	{mso-style-name:"No Spacing";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:Calibri;}
+p.ListParagraph, li.ListParagraph, div.ListParagraph
+	{mso-style-name:"List Paragraph";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:Calibri;}
+p.ListParagraphCxSpFirst, li.ListParagraphCxSpFirst, div.ListParagraphCxSpFirst
+	{mso-style-name:"List ParagraphCxSpFirst";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:Calibri;}
+p.ListParagraphCxSpMiddle, li.ListParagraphCxSpMiddle, div.ListParagraphCxSpMiddle
+	{mso-style-name:"List ParagraphCxSpMiddle";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:Calibri;}
+p.ListParagraphCxSpLast, li.ListParagraphCxSpLast, div.ListParagraphCxSpLast
+	{mso-style-name:"List ParagraphCxSpLast";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:Calibri;}
+p.Quote, li.Quote, div.Quote
+	{mso-style-name:Quote;
+	mso-style-link:"Quote Char";
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:Calibri;
+	mso-fareast-font-family:Calibri;
+	mso-bidi-font-family:"Times New Roman";
+	color:black;
+	font-style:italic;}
+span.QuoteChar
+	{mso-style-name:"Quote Char";
+	mso-style-locked:yes;
+	mso-style-link:Quote;
+	color:black;
+	font-style:italic;}
+p.IntenseQuote, li.IntenseQuote, div.IntenseQuote
+	{mso-style-name:"Intense Quote";
+	mso-style-link:"Intense Quote Char";
+	mso-style-next:Normal;
+	margin-top:10.0pt;
+	margin-right:.65in;
+	margin-bottom:14.0pt;
+	margin-left:.65in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-bottom-alt:solid #4F81BD .5pt;
+	padding:0in;
+	mso-padding-alt:0in 0in 4.0pt 0in;
+	font-size:11.0pt;
+	font-family:Calibri;
+	mso-fareast-font-family:Calibri;
+	mso-bidi-font-family:"Times New Roman";
+	color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.IntenseQuoteChar
+	{mso-style-name:"Intense Quote Char";
+	mso-style-locked:yes;
+	mso-style-link:"Intense Quote";
+	color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.SubtleEmphasis
+	{mso-style-name:"Subtle Emphasis";
+	mso-style-parent:"";
+	color:gray;
+	font-style:italic;}
+span.IntenseEmphasis
+	{mso-style-name:"Intense Emphasis";
+	mso-style-parent:"";
+	color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.SubtleReference
+	{mso-style-name:"Subtle Reference";
+	mso-style-parent:"";
+	font-variant:small-caps;
+	color:#C0504D;
+	text-decoration:underline;
+	text-underline:single;}
+span.IntenseReference
+	{mso-style-name:"Intense Reference";
+	mso-style-parent:"";
+	font-variant:small-caps;
+	color:#C0504D;
+	letter-spacing:.25pt;
+	font-weight:bold;
+	text-decoration:underline;
+	text-underline:single;}
+span.BookTitle
+	{mso-style-name:"Book Title";
+	mso-style-parent:"";
+	font-variant:small-caps;
+	letter-spacing:.25pt;
+	font-weight:bold;}
+p.TOCHeading, li.TOCHeading, div.TOCHeading
+	{mso-style-name:"TOC Heading";
+	mso-style-noshow:yes;
+	mso-style-parent:"Heading 1";
+	mso-style-next:Normal;
+	margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:#365F91;
+	font-weight:bold;}
+span.CharChar1
+	{mso-style-name:" Char Char1";
+	mso-style-locked:yes;
+	mso-style-link:Header;
+	mso-ansi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-ascii-font-family:"Times New Roman";
+	mso-hansi-font-family:"Times New Roman";}
+span.CharChar
+	{mso-style-name:" Char Char";
+	mso-style-noshow:yes;
+	mso-style-locked:yes;
+	mso-style-link:Footer;
+	mso-ansi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-ascii-font-family:"Times New Roman";
+	mso-hansi-font-family:"Times New Roman";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("BrownianMotion_files/header.htm") fs;
+	mso-footnote-continuation-separator:url("BrownianMotion_files/header.htm") fcs;
+	mso-endnote-separator:url("BrownianMotion_files/header.htm") es;
+	mso-endnote-continuation-separator:url("BrownianMotion_files/header.htm") ecs;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-header:url("BrownianMotion_files/header.htm") h1;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:512961113;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1949744194 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Calibri;
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+
+
+
+
+<div class="Section1">
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-size:8.0pt;line-height:115%;font-family:Arial"><a href="http://galileo.phys.virginia.edu/classes/152.mf1i.spring02/MolecularCollisions.htm"><span class="GramE"><span style="text-decoration:none;text-underline:none">previous</span></span></a><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><a href="http://galileo.phys.virginia.edu/classes/152.mf1i.spring02/HeatIndex.htm"><span style="text-decoration:none;text-underline:none">index</span></a> <span style="mso-spacerun:yes">&nbsp;&nbsp; </span> <a href="http://galileo.phys.virginia.edu/classes/152.mf1i.spring02/HeatTransport.htm"><span style="text-decoration:none;text-underline:none">next</span></a><o:p></o:p><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>  
+<a href="http://galileo.phys.virginia.edu/classes/152.mf1i.spring02/BrownianMotion.pdf"><span style="text-decoration:none;text-underline:none">PDF</span></a><o:p></o:p></span></b></p>
+
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-size:14.0pt;line-height:115%;font-family:Arial">Brownian <span class="GramE">Motion</span><o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><i style="mso-bidi-font-style:normal">Michael Fowler, U. <st1:state w:st="on"><st1:place w:st="on">Va.</st1:place></st1:state> 8/1/08<o:p></o:p></i></p>
+
+<p class="MsoNormal">See Applet <a href="http://galileo.phys.virginia.edu/classes/109N/more_stuff/Applets/brownian/brownian.html">here</a>!</p>
+
+<p class="MsoNormal">See Movie <a href="http://galileo.phys.virginia.edu/classes/152.mf1i.spring02/UVaBrownianDemo.mpg">here</a>!</p>
+
+<h2><span style="mso-bidi-font-family:Arial">Introduction: Jiggling Pollen
+Granules<o:p></o:p></span></h2>
+
+<p class="MsoNormal">In 1827 Robert Brown, a well-known botanist, was studying
+sexual relations of plants, and in particular was interested in the particles
+contained in grains of pollen.<span style="mso-spacerun:yes">&nbsp; </span>He began
+with a plant (<span class="SpellE"><i style="mso-bidi-font-style:normal">Clarckia</i></span><i style="mso-bidi-font-style:normal"> <span class="SpellE">pulchella</span></i>) in
+which he found the pollen grains were filled with oblong granules about 5
+microns long.<span style="mso-spacerun:yes">&nbsp; </span>He noticed that these
+granules were in constant motion, and satisfied <span class="GramE">himself</span>
+that this motion was not caused by currents in the fluid or evaporation.<span style="mso-spacerun:yes">&nbsp;&nbsp; </span>Smaller spherical grains, which at first he
+took to be oblongs end-on, but later realized weren’t, had even more vigorous
+motion.<span style="mso-spacerun:yes">&nbsp; </span>He thought at first that he was
+looking at the plant equivalent of sperm—they were jiggling around because they
+were alive.<span style="mso-spacerun:yes">&nbsp; </span>To check this, he did the
+same experiment with dead plants.<span style="mso-spacerun:yes">&nbsp; </span>There
+was just as much jiggling.<span style="mso-spacerun:yes">&nbsp; </span>Perhaps all
+organic matter, everything that ever was alive, still contained some mysterious
+life force at this microscopic level?<span style="mso-spacerun:yes">&nbsp;
+</span>Sure enough, he found the movement in tiny fragments of fossilized
+wood!<span style="mso-spacerun:yes">&nbsp; </span>But then he went on to find it in
+matter that never was alive—tiny particles of window glass, and even dust from
+a stone that had been part of the Sphinx. The movement evidently had nothing to
+do with the substance ever being alive or dead, much to Brown’s surprise.<span style="mso-spacerun:yes">&nbsp; </span>So what was causing it?<span style="mso-spacerun:yes">&nbsp; </span>Perhaps it <i style="mso-bidi-font-style:
+normal">was</i> evaporation currents, or the incident light energy, or just
+tiny unnoticed vibrations. <span style="mso-spacerun:yes">&nbsp;</span>But none of
+these explanations was very satisfactory.</p>
+
+<p class="MsoNormal">Half a century later, a new possible explanation
+emerged.<span style="mso-spacerun:yes">&nbsp; </span>The kinetic theory of heat
+developed by Maxwell, Boltzmann and others was gaining credence. If all the
+molecules in the fluid were indeed in vigorous motion, maybe these tiny
+granules were being moved around by this constant battering from all sides as
+the fluid molecules bounced off.<span style="mso-spacerun:yes">&nbsp; </span>But
+there was a problem with this explanation: didn’t it violate the second law of
+thermodynamics?<span style="mso-spacerun:yes">&nbsp; </span>It had been well
+established that energy always <span class="GramE">degrades,</span> as friction
+slows movement kinetic energy goes to heat energy.<span style="mso-spacerun:yes">&nbsp; </span>This seemed to be the other way round—the
+molecular battering was certainly disorganized heat energy, but when the
+granule moved it had evidently gained kinetic energy.<span style="mso-spacerun:yes">&nbsp; </span>Since many scientists regarded the second law
+as an absolute truth, they were very skeptical of this explanation.<span style="mso-spacerun:yes">&nbsp; </span></p>
+
+<p class="MsoNormal">In 1888, French experimentalist <span class="SpellE">Léon</span>
+<span class="SpellE">Gouy</span> investigated the movement in detail, finding it to
+be <span class="GramE">more lively</span> in low viscosity liquids.<span style="mso-spacerun:yes">&nbsp; </span>He established <span class="GramE">that <span style="mso-spacerun:yes">&nbsp;</span>it</span> was unaffected by intense
+illumination or by strong electromagnetic fields.<span style="mso-spacerun:yes">&nbsp; </span>Despite the second law, <span class="SpellE">Guoy</span>
+believed—correctly—the random motion was indeed generated by thermal molecular
+collisions.</p>
+
+<p class="MsoNormal">It’s easy to see the Brownian <span class="GramE">movement,</span>
+or Brownian motion (it’s called both) by looking through a microscope at
+tobacco smoke in air. We have a movie <a href="http://demolab.phys.virginia.edu/demos/pictures/4d10-10.mpg">here</a>. </p>
+
+<h2>Einstein’s Theory: the Osmosis Analogy</h2>
+
+<p class="MsoNormal">In 1905, Einstein published a theoretical analysis of
+Brownian motion. He saw it as a crucial test of the kinetic theory, even of the
+atomic/molecular nature of matter.<span style="mso-spacerun:yes">&nbsp;
+</span>Previous discussions of the phenomenon had all been qualitative—Einstein
+demonstrated that careful observation of Brownian motion could reveal the
+actual size of molecules, that is, find Avogadro’s number.<span style="mso-spacerun:yes">&nbsp; </span></p>
+
+<p class="MsoNormal">If the results of such experiments were consistent with
+other estimates of Avogadro’s number, based on unrelated phenomena such as gas
+viscosity measurements and van <span class="SpellE">der</span> Waal’s equation
+fit to isotherms of real gases, it would be a powerful argument for the kinetic
+theory.<span style="mso-spacerun:yes">&nbsp; </span>On the other hand, if there was
+real disagreement then the kinetic theory was in serious trouble.</p>
+
+<p class="MsoNormal">Einstein’s approach was based on an analogy with osmosis:
+recall that osmosis involves one substance (the solute) dissolved in another,
+the solvent.<span style="mso-spacerun:yes">&nbsp; </span>The solute has larger
+molecules.<span style="mso-spacerun:yes">&nbsp; </span>Now imagine a container
+divided in two by a <span class="SpellE">semipermeable</span> membrane, meaning
+the solvent molecules can pass through the tiny holes in it, but the solute
+molecules are too big to get through.<span style="mso-spacerun:yes">&nbsp;
+</span>Suppose on one side of the membrane there’s pure solvent, on the other
+side solvent plus solute (assumed fairly dilute), and initially the pressure on
+the two sides of the membrane is the same.<span style="mso-spacerun:yes">&nbsp;
+</span>The pressure on the side with solute is generated by both solvent and
+solute molecules bouncing off the membrane, so necessarily the rate at which <i style="mso-bidi-font-style:normal">solvent</i> molecules are hitting the
+membrane on this side is less than on the other side.<span style="mso-spacerun:yes">&nbsp; </span>Some percentage of the solvent molecules
+hitting the membrane pass through the little holes, so what will happen is that
+more will pass through from the pure solvent side, and gradually pressure will
+build up on the solvent + solute side until equilibrium is reached, meaning equal
+numbers of solvent molecules going each way on average.</p>
+
+<p class="MsoNormal"><i style="mso-bidi-font-style:normal">Einstein’s insight was
+that a liquid containing a large number of tiny identical particles, such as
+those observed in Brownian motion, was really no different <span class="GramE">from
+a solvent containing solute molecules</span></i>.<span style="mso-spacerun:yes">&nbsp; </span>True, the Brownian particles were a lot
+bigger than molecules, but they were buzzing around, and would therefore bounce
+off the walls of a container, generating pressure. The formal analysis should
+be the same: the kinetic theory, with equipartition of energy, predicted they
+would have kinetic energy 1.5<i style="mso-bidi-font-style:normal">k<sub>B</sub>T</i>.<span style="mso-spacerun:yes">&nbsp; </span><span style="mso-spacerun:yes">&nbsp;</span>If the
+concentration of particles varied spatially, they would flow to even it
+out.<span style="mso-spacerun:yes">&nbsp; </span></p>
+
+<p class="MsoNormal">Here again he used an osmosis analogy: think of a
+cylindrical container, with a <span class="SpellE">semipermeable</span> membrane
+which is like a piston, free to move. <span style="mso-spacerun:yes">&nbsp;</span>The solute concentration is initially greater
+to the left of the piston. </p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><!--[if mso & !supportInlineShapes & supportFields]><span
+style='mso-element:field-begin;mso-field-lock:yes'></span><span
+style='mso-spacerun:yes'> </span>SHAPE<span style='mso-spacerun:yes'> 
+</span>\* MERGEFORMAT <span style='mso-element:field-separator'></span><![endif]--><!--[if gte vml 1]><v:group
+ id="_x0000_s1027" editas="canvas" style='width:447.75pt;height:115pt;
+ mso-position-horizontal-relative:char;mso-position-vertical-relative:line'
+ coordorigin="1440,9395" coordsize="8955,2300">
+ <o:lock v:ext="edit" aspectratio="t"/>
+ <v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75"
+  o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+  <v:stroke joinstyle="miter"/>
+  <v:formulas>
+   <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+   <v:f eqn="sum @0 1 0"/>
+   <v:f eqn="sum 0 0 @1"/>
+   <v:f eqn="prod @2 1 2"/>
+   <v:f eqn="prod @3 21600 pixelWidth"/>
+   <v:f eqn="prod @3 21600 pixelHeight"/>
+   <v:f eqn="sum @0 0 1"/>
+   <v:f eqn="prod @6 1 2"/>
+   <v:f eqn="prod @7 21600 pixelWidth"/>
+   <v:f eqn="sum @8 21600 0"/>
+   <v:f eqn="prod @7 21600 pixelHeight"/>
+   <v:f eqn="sum @10 21600 0"/>
+  </v:formulas>
+  <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+  <o:lock v:ext="edit" aspectratio="t"/>
+ </v:shapetype><v:shape id="_x0000_s1026" type="#_x0000_t75" style='position:absolute;
+  left:1440;top:9395;width:8955;height:2300' o:preferrelative="f" fillcolor="#e5dfec">
+  <v:fill o:detectmouseclick="t"/>
+  <v:path o:extrusionok="t" o:connecttype="none"/>
+  <o:lock v:ext="edit" text="t"/>
+ </v:shape><v:rect id="_x0000_s1031" style='position:absolute;left:5865;top:9525;
+  width:1829;height:976' fillcolor="#dbe5f1" strokeweight="2pt"/>
+ <v:rect id="_x0000_s1028" style='position:absolute;left:4050;top:9524;width:1829;
+  height:976' fillcolor="#b8cce4" strokeweight="2pt"/>
+ <v:rect id="_x0000_s1029" style='position:absolute;left:5779;top:9554;width:118;
+  height:931' fillcolor="red" strokecolor="red" strokeweight=".5pt"/>
+ <v:shapetype id="_x0000_t202" coordsize="21600,21600" o:spt="202" path="m,l,21600r21600,l21600,xe">
+  <v:stroke joinstyle="miter"/>
+  <v:path gradientshapeok="t" o:connecttype="rect"/>
+ </v:shapetype><v:shape id="_x0000_s1032" type="#_x0000_t202" style='position:absolute;
+  left:3436;top:10650;width:5009;height:895' stroked="f">
+  <v:fill opacity="0"/>
+  <v:textbox>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal align=center style='text-align:center'><span
+     class=SpellE><span style='font-size:11.0pt;line-height:115%;font-family:
+     Arial;color:#1F497D'>Semipermeable</span></span><span style='font-size:
+     11.0pt;line-height:115%;font-family:Arial;color:#1F497D'> membrane piston
+     free to move<o:p></o:p></span></p>
+     <p class=MsoNormal align=center style='text-align:center'><span
+     style='font-size:11.0pt;line-height:115%;font-family:Arial;color:#1F497D'>Color
+     represents solute concentration<o:p></o:p></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+ </v:shape><w:wrap type="none"/>
+ <w:anchorlock/>
+</v:group><![endif]--><!--[if !vml]--><img width="597" height="153" src="./Brownian Motion_files/image001.gif" v:shapes="_x0000_s1027 _x0000_s1026 _x0000_s1031 _x0000_s1028 _x0000_s1029 _x0000_s1032"><!--[endif]--><!--[if mso & !supportInlineShapes & supportFields]><v:shape
+ id="_x0000_i1025" type="#_x0000_t75" style='width:447.75pt;height:115pt'>
+ <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+</v:shape><span style='mso-element:field-end'></span><![endif]--></p>
+
+<p class="MsoNormal">From the previous discussion, it’s clear that the solvent
+will flow to the left, raising the pressure there, so the piston will move to
+the right. The solute molecules cannot cross the piston, so the piston will
+move until the solute concentrations on the two sides are equal.</p>
+
+<p class="MsoNormal">The rather surprising result is that if one assumes
+equipartition of energy, <i style="mso-bidi-font-style:normal">the pressure on
+the piston from the solute on one side is the same as if those solute molecules
+were freely moving in a vacuum</i>.<span style="mso-spacerun:yes">&nbsp; </span></p>
+
+<p class="MsoNormal">Their greatly reduced mean free path <i style="mso-bidi-font-style:
+normal">doesn’t matter</i>: the pressure depends only on the concentration in
+the immediate neighborhood of the piston, and the speed of the molecules.<span style="mso-spacerun:yes">&nbsp; </span>And, this is equally true if the solute
+molecules are replaced by tiny but macroscopic spheres.<span style="mso-spacerun:yes">&nbsp; </span>At least, this is what Einstein asserted, and
+he gave a formal proof based on an evaluation of the free energy, assuming a
+dilute system (meaning interactions between the spherical granules could be
+neglected).<span style="mso-spacerun:yes">&nbsp; </span></p>
+
+<p class="MsoNormal">So we can think of the little spheres as <i style="mso-bidi-font-style:normal">moving freely through space</i> (!), and
+although their paths will actually be very different, calculations of local
+pressure based on this should be correct: the pressure on the walls from the
+granules is therefore given by the ideal gas law, that is,</p>
+
+<p class="MTDisplayEquation"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1026" type="#_x0000_t75" style='width:201.75pt;height:21pt' o:ole="">
+ <v:imagedata src="BrownianMotion_files/image002.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="269" height="28" src="./Brownian Motion_files/image003.gif" v:shapes="_x0000_i1026"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1026"
+  DrawAspect="Content" ObjectID="_1279095860">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class="MsoNormal"><span class="GramE">where</span> the average kinetic energy is
+written <i style="mso-bidi-font-style:normal">W</i>, and—if the kinetic theory
+is correct—this should equal 1.5<i style="mso-bidi-font-style:normal">k<sub>B</sub>T</i>.</p>
+
+<h2>An Atmosphere of Yellow Spheres</h2>
+
+<p class="MsoNormal"><span style="mso-spacerun:yes">&nbsp;</span>So how is this to be
+checked experimentally?<span style="mso-spacerun:yes">&nbsp; </span>As we shall see
+in a moment, the first experiment used uniformly sized tiny <i style="mso-bidi-font-style:normal">spheres</i> in place of granules. The first
+obvious thought is that if <sub><!--[if gte vml 1]><v:shape id="_x0000_i1027"
+ type="#_x0000_t75" style='width:30pt;height:21pt' o:ole="">
+ <v:imagedata src="BrownianMotion_files/image004.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="40" height="28" src="./Brownian Motion_files/image005.gif" v:shapes="_x0000_i1027"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1027"
+  DrawAspect="Content" ObjectID="_1279095861">
+ </o:OLEObject>
+</xml><![endif]-->is predicted to be 1.5<i style="mso-bidi-font-style:normal">k<sub>B</sub>T</i>,
+perhaps one can measure the jiggling velocity of the tiny sphere a few times
+and take an average. This, however, misunderstands the nature of the motion: a
+molecule will bounce off the sphere around 10<sup>20 </sup>times per second,
+and although that only makes a tiny difference to the sphere’s velocity, in one
+hundredth of a second the average imbalance, &#8730;<i style="mso-bidi-font-style:
+normal">N</i>, will be of order 10<sup>9</sup>, enough to make a change in a
+small sphere’s velocity. And all the successive changes are completely random
+in direction, so it’s as hopeless as attempting to measure the velocity of H<sub>2</sub>S
+molecules in air by releasing a few and measuring the time for the smell to
+reach the far end of a room. </p>
+
+<p class="MsoNormal">A slightly less direct method of finding <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1028" type="#_x0000_t75" style='width:30pt;height:21pt' o:ole="">
+ <v:imagedata src="BrownianMotion_files/image004.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="40" height="28" src="./Brownian Motion_files/image005.gif" v:shapes="_x0000_i1028"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1028"
+  DrawAspect="Content" ObjectID="_1279095862">
+ </o:OLEObject>
+</xml><![endif]--><span style="mso-spacerun:yes">&nbsp;</span>is needed.<span style="mso-spacerun:yes">&nbsp; </span>Now, it is well-known that in an isothermal
+atmosphere of an ideal gas under gravity the density falls off exponentially
+with height, this is established by balancing the gravitational force on a thin
+horizontal slice against the pressure difference between top and bottom.<span style="mso-spacerun:yes">&nbsp; </span><span style="mso-spacerun:yes">&nbsp;</span>It
+occurred to the French experimentalist Jean Perrin that this same argument
+should apply to a “gas” of tiny uniform spheres in a fluid: their pressure is
+generated by the Brownian motion. <span style="mso-spacerun:yes">&nbsp;</span>In
+1908, he chose <span class="SpellE">gamboge</span>, an emulsion used for water
+color, which contains bright yellow spheres of various sizes.<span style="mso-spacerun:yes">&nbsp; </span>By various ingenious tricks described in his
+book he was able to separate out spheres all close to the same size.<span style="mso-spacerun:yes">&nbsp; </span>He was able to measure the size, he knew the
+density—and that of the “solvent”—so he could compute the gravitational
+pull.<span style="mso-spacerun:yes">&nbsp; </span>He could also measure the decrease
+in density with height in isothermal equilibrium. </p>
+
+<p class="MsoNormal">The calculation is as follows: for a horizontal slice of
+thickness <i style="mso-bidi-font-style:normal">dh</i>, with <i style="mso-bidi-font-style:normal">n</i> spheres per unit volume, each of
+volume <i style="mso-bidi-font-style:normal">&#966;</i> and density &#916;, in
+a liquid of density <i style="mso-bidi-font-style:normal">&#948; </i>(I’m using
+Perrin’s notation here), the gravitational downward force on the slice is <span class="SpellE"><i style="mso-bidi-font-style:normal">ndh</i></span><i style="mso-bidi-font-style:normal"> &#966;</i> (&#916; - <i style="mso-bidi-font-style:
+normal"><span style="mso-spacerun:yes">&nbsp;</span>&#948;</i>), this is balanced by
+the pressure difference:</p>
+
+<p class="MTDisplayEquation" align="center" style="text-align:center"><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1029" type="#_x0000_t75" style='width:120.75pt;height:20.25pt'
+ o:ole="">
+ <v:imagedata src="BrownianMotion_files/image006.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="161" height="27" src="./Brownian Motion_files/image007.gif" v:shapes="_x0000_i1029"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1029"
+  DrawAspect="Content" ObjectID="_1279095863">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class="MsoNormal">This is easily integrated to give the exponential vertical
+density profile.<span style="mso-spacerun:yes">&nbsp; </span></p>
+
+<p class="MTDisplayEquation" align="center" style="text-align:center"><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1030" type="#_x0000_t75" style='width:260.25pt;height:38.25pt'
+ o:ole="">
+ <v:imagedata src="BrownianMotion_files/image008.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="347" height="51" src="./Brownian Motion_files/image009.gif" v:shapes="_x0000_i1030"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1030"
+  DrawAspect="Content" ObjectID="_1279095864">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class="MsoNormal">Perrin could establish by observation and measurement every
+term in this equation except <i style="mso-bidi-font-style:normal">W</i>, so
+this was a way of measuring <i style="mso-bidi-font-style:normal">W</i>,
+assuming of course the validity of the kinetic theory.</p>
+
+<p class="MsoNormal">Now equating <i style="mso-bidi-font-style:normal">W</i> to
+1.5<i style="mso-bidi-font-style:normal">k<sub>B</sub>T</i> gives a value for
+Boltzmann’s constant, and hence via the known gas constant <i style="mso-bidi-font-style:
+normal">R</i> = <span class="SpellE"><i style="mso-bidi-font-style:normal">N<sub>A</sub>k<sub>B</sub></i></span>,
+a value for Avogadro’s number.</p>
+
+<p class="MsoNormal">Perrin repeated the experiment with a wide variety of
+different substances, the experiments were very challenging, <span class="GramE">his
+results for Avogadro’s</span> number were consistently between 5×10<sup>23</sup>
+and 8×10<sup>23</sup>.<span style="mso-spacerun:yes">&nbsp; </span>He remarked that
+for the largest granules behaving like a perfect gas, <i style="mso-bidi-font-style:
+normal">a gram molecule would weigh 200,000 tons</i>!<span style="mso-spacerun:yes">&nbsp; </span>The results were consistent with the other
+quite different ways of finding Avogadro’s number, and these experiments
+convinced even the most recalcitrant anti-atomic theory skeptics.<span style="mso-spacerun:yes">&nbsp; </span>The kinetic theory was fully established.</p>
+
+<h2><span class="SpellE">Langevin’s</span> Theory</h2>
+
+<p class="MsoNormal">In 1908, <span class="SpellE">Langevin</span> gave a more
+direct treatment of Brownian motion. <span style="mso-spacerun:yes">&nbsp;</span>He
+focused on following one particle as it jiggled around.<span style="mso-spacerun:yes">&nbsp; </span>We’ll follow him in restricting the motion to
+one dimension—assuming the molecular collisions driving the motion are
+completely random, the motions in the three directions are uncorrelated, so can
+be treated separately and added.<span style="mso-spacerun:yes">&nbsp;
+</span>Finally, we’ll neglect gravity and any other external force fields. </p>
+
+<p class="MsoNormal">Let’s assume, then, that we’re tracking a small spherical
+object, of mass <i style="mso-bidi-font-style:normal">m</i> and radius <i style="mso-bidi-font-style:normal">a</i>.<span style="mso-spacerun:yes">&nbsp;
+</span>It will experience a viscous drag force -6<i style="mso-bidi-font-style:
+normal">&#960;a&#951;v</i> (Stokes’ formula).<span style="mso-spacerun:yes">&nbsp;
+</span>We’ll denote the random thermal molecular collision force by <i style="mso-bidi-font-style:normal">X</i>, which clearly averages to zero.<span style="mso-spacerun:yes">&nbsp; </span></p>
+
+<p class="MsoNormal">Assuming the equipartition of energy applies also to the
+kinetic energy of our sphere, </p>
+
+<p class="MTDisplayEquation" align="center" style="text-align:center"><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1031" type="#_x0000_t75" style='width:72.75pt;height:39pt' o:ole="">
+ <v:imagedata src="BrownianMotion_files/image010.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="97" height="52" src="./Brownian Motion_files/image011.gif" v:shapes="_x0000_i1031"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1031"
+  DrawAspect="Content" ObjectID="_1279095865">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class="MsoNormal"><span class="GramE">where</span> the average is over a long
+time.</p>
+
+<p class="MsoNormal">The equation of motion <i style="mso-bidi-font-style:normal">ma</i>
+= <span class="GramE"><i style="mso-bidi-font-style:normal">F</i><span style="mso-spacerun:yes">&nbsp; </span>is</span>:</p>
+
+<p class="MTDisplayEquation" align="center" style="text-align:center"><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1032" type="#_x0000_t75" style='width:122.25pt;height:33pt' o:ole="">
+ <v:imagedata src="BrownianMotion_files/image012.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="163" height="44" src="./Brownian Motion_files/image013.gif" v:shapes="_x0000_i1032"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1032"
+  DrawAspect="Content" ObjectID="_1279095866">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class="MsoNormal">Multiplying throughout by <i style="mso-bidi-font-style:
+normal">x</i>, </p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1033" type="#_x0000_t75" style='width:135pt;height:33pt' o:ole="">
+ <v:imagedata src="BrownianMotion_files/image014.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="180" height="44" src="./Brownian Motion_files/image015.gif" v:shapes="_x0000_i1033"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1033"
+  DrawAspect="Content" ObjectID="_1279095867">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class="MsoNormal"><span class="GramE">which</span> can be written</p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1034" type="#_x0000_t75" style='width:207.75pt;height:36.75pt'
+ o:ole="">
+ <v:imagedata src="BrownianMotion_files/image016.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="277" height="49" src="./Brownian Motion_files/image017.gif" v:shapes="_x0000_i1034"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1034"
+  DrawAspect="Content" ObjectID="_1279095868">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class="MsoNormal">Now we’ll average over a long time:</p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1035" type="#_x0000_t75" style='width:204pt;height:39pt' o:ole="">
+ <v:imagedata src="BrownianMotion_files/image018.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="272" height="52" src="./Brownian Motion_files/image019.gif" v:shapes="_x0000_i1035"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1035"
+  DrawAspect="Content" ObjectID="_1279095869">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class="MsoNormal">Since <i style="mso-bidi-font-style:normal">X</i> is random,
+<sub><!--[if gte vml 1]><v:shape id="_x0000_i1036" type="#_x0000_t75" style='width:39.75pt;
+ height:17.25pt' o:ole="">
+ <v:imagedata src="BrownianMotion_files/image020.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="53" height="23" src="./Brownian Motion_files/image021.gif" v:shapes="_x0000_i1036"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1036"
+  DrawAspect="Content" ObjectID="_1279095870">
+ </o:OLEObject>
+</xml><![endif]--><span style="mso-spacerun:yes">&nbsp;&nbsp;</span>Also, <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1037" type="#_x0000_t75" style='width:90pt;height:24pt' o:ole="">
+ <v:imagedata src="BrownianMotion_files/image022.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="120" height="32" src="./Brownian Motion_files/image023.gif" v:shapes="_x0000_i1037"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1037"
+  DrawAspect="Content" ObjectID="_1279095871">
+ </o:OLEObject>
+</xml><![endif]--><span style="mso-spacerun:yes">&nbsp;&nbsp;</span>The operations of
+averaging and taking the time derivative commute, so we can write the equation:</p>
+
+<p class="MTDisplayEquation" align="center" style="text-align:center"><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1038" type="#_x0000_t75" style='width:2in;height:33pt' o:ole="">
+ <v:imagedata src="BrownianMotion_files/image024.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="192" height="44" src="./Brownian Motion_files/image025.gif" v:shapes="_x0000_i1038"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1038"
+  DrawAspect="Content" ObjectID="_1279095872">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class="MsoNormal">To solve this differential equation, write <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1039" type="#_x0000_t75" style='width:51pt;height:30.75pt' o:ole="">
+ <v:imagedata src="BrownianMotion_files/image026.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="68" height="41" src="./Brownian Motion_files/image027.gif" v:shapes="_x0000_i1039"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1039"
+  DrawAspect="Content" ObjectID="_1279095873">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class="MsoNormal">The equation becomes:</p>
+
+<p class="MTDisplayEquation" align="center" style="text-align:center"><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1040" type="#_x0000_t75" style='width:105.75pt;height:30.75pt'
+ o:ole="">
+ <v:imagedata src="BrownianMotion_files/image028.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="141" height="41" src="./Brownian Motion_files/image029.gif" v:shapes="_x0000_i1040"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1040"
+  DrawAspect="Content" ObjectID="_1279095874">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class="MsoNormal">The solution is</p>
+
+<p class="MTDisplayEquation" align="center" style="text-align:center"><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1041" type="#_x0000_t75" style='width:159pt;height:33.75pt' o:ole="">
+ <v:imagedata src="BrownianMotion_files/image030.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="212" height="45" src="./Brownian Motion_files/image031.gif" v:shapes="_x0000_i1041"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1041"
+  DrawAspect="Content" ObjectID="_1279095875">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class="MsoNormal">For the actual systems examined experimentally, the
+exponential term dies off in far less than a microsecond, so for a particle
+beginning at the origin:</p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1042" type="#_x0000_t75" style='width:120.75pt;height:33pt' o:ole="">
+ <v:imagedata src="BrownianMotion_files/image032.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="161" height="44" src="./Brownian Motion_files/image033.gif" v:shapes="_x0000_i1042"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1042"
+  DrawAspect="Content" ObjectID="_1279095876">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class="MsoNormal"><span class="GramE">so</span> </p>
+
+<p class="MTDisplayEquation" align="center" style="text-align:center"><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1043" type="#_x0000_t75" style='width:74.25pt;height:33pt' o:ole="">
+ <v:imagedata src="BrownianMotion_files/image034.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="99" height="44" src="./Brownian Motion_files/image035.gif" v:shapes="_x0000_i1043"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1043"
+  DrawAspect="Content" ObjectID="_1279095877">
+ </o:OLEObject>
+</xml><![endif]--><sub><!--[if gte vml 1]><v:shape id="_x0000_i1044" type="#_x0000_t75"
+ style='width:9pt;height:14.25pt' o:ole="">
+ <v:imagedata src="BrownianMotion_files/image036.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="12" height="19" src="./Brownian Motion_files/image037.gif" v:shapes="_x0000_i1044"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1044"
+  DrawAspect="Content" ObjectID="_1279095878">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class="MsoNormal">Hence by doing multiple experiments and averaging,
+Boltzmann’s constant <span class="SpellE"><i style="mso-bidi-font-style:normal">k<sub>B</sub></i></span>
+can be found, and from that Avogadro’s number, as before.</p>
+
+<p class="MsoNormal">Note that the constancy of <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1045" type="#_x0000_t75" style='width:63pt;height:21.75pt' o:ole="">
+ <v:imagedata src="BrownianMotion_files/image038.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="84" height="29" src="./Brownian Motion_files/image039.gif" v:shapes="_x0000_i1045"><!--[endif]--></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1045"
+  DrawAspect="Content" ObjectID="_1279095879">
+ </o:OLEObject>
+</xml><![endif]-->also appears in discussions of random molecular motion and
+the random path—this is all the same thing. </p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:
+normal"><span style="color:red">Exercises</span></i></b>:</p>
+
+<p class="MsoNormal" style="margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><span style="mso-list:Ignore">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]-->Estimate
+the decay time of the exponential term in the integrated expression for <span class="GramE"><i style="mso-bidi-font-style:normal">y</i>(</span><i style="mso-bidi-font-style:normal">t</i>) above.<span style="mso-spacerun:yes">&nbsp; </span>You’ll need to find the viscosity of water, and
+estimate the sphere size as a few microns.</p>
+
+<p class="MsoNormal" style="margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><span style="mso-list:Ignore">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]-->Estimate
+how rapidly density of yellow spheres drops with height in Perrin’s
+“atmosphere”. </p>
+
+<p class="MsoNormal" style="margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><span style="mso-list:Ignore">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="mso-spacerun:yes">&nbsp;</span>Notice the average distance traveled in the
+last equation above depends on the kinetic energy, the size, and the viscosity.
+This means a tiny lead sphere would diffuse the same distance, on average, as a
+tiny sphere of oil of the same size. But isn’t the lead moving a lot more
+slowly, since it has the same average kinetic energy?<span style="mso-spacerun:yes">&nbsp; </span>Explain.</p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-size:8.0pt;line-height:115%;font-family:Arial"><a href="http://galileo.phys.virginia.edu/classes/152.mf1i.spring02/MolecularCollisions.htm"><span class="GramE"><span style="text-decoration:none;text-underline:none">previous</span></span></a><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><a href="http://galileo.phys.virginia.edu/classes/152.mf1i.spring02/HeatIndex.htm"><span style="text-decoration:none;text-underline:none">index</span></a><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><a href="http://galileo.phys.virginia.edu/classes/152.mf1i.spring02/HeatTransport.htm"><span style="text-decoration:none;text-underline:none">next</span></a><o:p></o:p></span></b></p>
+
+<h2><o:p>&nbsp;</o:p></h2>
+
+<h2>References</h2>
+
+<p class="MsoNormal">For Brown’s work, see <i style="mso-bidi-font-style:normal">A
+Source Book in Physics</i>, W. F. <span class="SpellE">Magie</span>, Harvard,
+1963, page 251, where several pages from the original pamphlet are reproduced.</p>
+
+<p class="MsoNormal">Albert Einstein: <i style="mso-bidi-font-style:normal">Investigations
+on the Theory of the Brownian Movement</i><span class="GramE">,<span style="mso-spacerun:yes">&nbsp; </span><st1:place w:st="on"><st1:city w:st="on">Dover</st1:city>,
+ <st1:state w:st="on">New York</st1:state></st1:place>, 1956.</span> </p>
+
+<p class="MsoNormal">Jean Perrin: <i style="mso-bidi-font-style:normal">Brownian <span class="GramE">Motion</span> and Molecular Reality</i>, <st1:place w:st="on"><st1:city w:st="on">Dover</st1:city>, <st1:state w:st="on">New York</st1:state></st1:place>,
+2005.</p>
+
+<p class="MsoNormal"><span class="SpellE">Langevin’s</span> paper in translation: <i style="mso-bidi-font-style:normal">Am</i>. <i style="mso-bidi-font-style:normal">J</i>.
+<i style="mso-bidi-font-style:normal">Phys</i>. <b style="mso-bidi-font-weight:
+normal">65</b> (11), November 1997, 1079.</p>
+
+<p class="MsoNormal">Wolfgang Pauli: <i style="mso-bidi-font-style:normal">Pauli
+lectures on Physics Volume 4, Statistical Mechanics</i>. <st1:place w:st="on"><st1:city w:st="on">Dover</st1:city>, <st1:state w:st="on">New York</st1:state></st1:place>,
+2000, page 64.</p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+</div>
+
+
+
+
+</o:smarttagtype></o:smarttagtype></o:smarttagtype></body></html>

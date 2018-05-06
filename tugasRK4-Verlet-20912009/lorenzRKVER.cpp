@@ -1,0 +1,108 @@
+/******************************************************/
+/* Lorenz System using Verlet & RK4 algorithm         */
+/* copyleft (c) 2012. Ridlo W. Wibowo                 */
+/******************************************************/
+#include<iostream>
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#include<fstream>
+using namespace std;
+
+double sigma=10.;
+double rho=28.;
+double beta=8./3.;
+
+double fdx(double x, double y){return sigma*(y-x);}
+double fdy(double x, double y, double z){return x*(rho-z) - y;}
+double fdz(double x, double y, double z){return x*y - beta*z;}
+void plot();
+
+int main(){
+    int N=10000;
+    double xi, yi, zi, ti, tf, h;
+    double x, y, z, t;
+    // kondisi awal
+    xi=3.;
+    yi=5.;
+    zi=1.;
+    ti=0.;
+    tf=50.;
+    h = (tf-ti)/(double) N; // time step
+    x=xi; y=yi; z=zi; t=ti; // inisiasi 
+    
+    // Verlet algorithm -> gak yakin ini verlet yg asli, haha, Leapfrog method ??
+    ofstream out;
+    out.open("lorenzVer-out.txt");
+    out << t << " " << x << " " << y << " " << z << endl;
+    for (int i=1;i<=N;i++){
+        x = x + fdx(x,y)*h; //- 0.5*sigma*h*h; // plus turunan keduanya
+        y = y + fdy(x,y,z)*h; //- 0.5*h*h;
+        z = z + fdz(x,y,z)*h; //- 0.5*beta*h*h;
+        t = t + h;
+        out << t << " " << x << " " << y << " " << z << endl;
+    }
+    out.close();
+    
+    // Runge-Kutta method
+    x=xi; y=yi; z=zi; t=ti; // inisiasi lagi
+    ofstream outfile;
+    outfile.open("lorenzRK4-out.txt");
+    outfile << t << " " << x << " " << y << " " << z << endl;
+    double kx1, kx2, kx3, kx4, ky1, ky2, ky3, ky4, kz1, kz2, kz3, kz4;
+    double ksx, ksy, ksz;
+    for (int i=1;i<=N;i++){
+            kx1 = h*fdx(x, y); 
+            ky1 = h*fdy(x, y, z);
+            kz1 = h*fdz(x, y, z);
+            
+            ksx = x+kx1/2.; ksy = y+ky1/2.; ksz = z+kz1/2.;
+            kx2 = h*fdx(ksx, ksy);
+            ky2 = h*fdy(ksx, ksy, ksz);
+            kz2 = h*fdz(ksx, ksy, ksz); 
+            
+            ksx = x+kx2/2.; ksy = y+ky2/2.; ksz = z+kz2/2.; 
+            kx3 = h*fdx(ksx, ksy);
+            ky3 = h*fdy(ksx, ksy, ksz);
+            kz3 = h*fdz(ksx, ksy, ksz);
+            
+            ksx = x+kx3; ksy = y+ky3; ksz = z+kz3;
+            kx4 = h*fdx(ksx, ksy);
+            ky4 = h*fdy(ksx, ksy, ksz);
+            kz4 = h*fdz(ksx, ksy, ksz);
+        
+        x = x + (kx1 + 2.*(kx2+kx3) + kx4)/6.;
+        y = y + (ky1 + 2.*(ky2+ky3) + ky4)/6.;
+        z = z + (kz1 + 2.*(kz2+kz3) + kz4)/6.;
+        t = t + h;
+        outfile << t << " " << x << " " << y << " " << z << endl;
+    } 
+    outfile.close(); 
+    
+    plot();
+
+    return 0;
+}
+
+void plot(){
+    // plot hasil
+    ofstream ploter;
+    ploter.open("plot_lorenz.in");
+    ploter << "# gnuplot input file\n";
+    ploter << "set term wxt 0\n";
+    ploter << "set xlabel \"t\"\n";
+    ploter << "set ylabel \"x(t), y(t), z(t)\"\n";
+    ploter << "plot \"lorenzVer-out.txt\" u 1:2 w l title \"verlet - x(t)\", \"lorenzVer-out.txt\" u 1:3 w l title \"verlet - y(t)\", \"lorenzVer-out.txt\" u 1:4 w l title \"verlet - z(t)\", \"lorenzRK4-out.txt\" u 1:2 w l title \"RK4 - x(t)\", \"lorenzRK4-out.txt\" u 1:3 w l title \"RK4 - y(t)\", \"lorenzRK4-out.txt\" u 1:4 w l title \"RK4 - z(t)\"\n";
+    ploter << "set term wxt 1\n";
+    ploter << "set xlabel \"x\"\n";
+    ploter << "set ylabel \"y\"\n";
+    ploter << "set zlabel \"z\"\n";
+    ploter << "set xrange [-20:25]\n";
+    ploter << "set yrange [-30:30]\n";
+    ploter << "set zrange [-20:60]\n";
+    ploter << "splot \"lorenzVer-out.txt\" u 2:3:4 w d lc 3 title \"verlet\", \"lorenzRK4-out.txt\" u 2:3:4 w d lc 1 title \"RK4\"\n";
+    ploter.close();
+    
+    // jalankan gnuplot
+    system("gnuplot -persist < plot_lorenz.in");
+}
